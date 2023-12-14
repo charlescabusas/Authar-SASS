@@ -13,12 +13,12 @@
             padding: 20rem 2rem;
             gap: 5rem;
             h6{
-                color: $clr-light;
+                color: $bg-light;
                 font-weight: bold;
                 font-size: 1.2rem;
             }
             h1{
-                color: $clr-light;
+                color: $bg-light;
                 font-size: 65px;
                 font-family: 'roboto slab';
                 line-height: 6rem;
@@ -29,28 +29,28 @@
                 max-width: fit-content;
                 transition: 0.5s ease;
                 a{
-                    color: $clr-light;
+                    color: $bg-light;
                     font-weight: bold;
                     font-size: small;
                     padding: 2rem 5rem;
                     max-width: 10rem;
-                    background-color: $clr-brown;
+                    background-color: $bg-brown;
                 }
                 a:hover{
-                    background-color: $clr-light;
-                    color: $clr-brown;
+                    background-color: $bg-light;
+                    color: $bg-brown;
                 }
             }
             .buy__btn:hover{
                 transform: translate(0,-10px);
-                color: $clr-brown;
+                color: $bg-brown;
                 transition: 0.5s ease;
             }
         }
     }
 }
 .banner__2nd{
-    background-color: $clr-eggwhite;
+    background-color: $bg-eggwhite;
     .banner__wrapper{
         display: flex;
         flex-direction: column;
@@ -70,7 +70,7 @@
             flex-direction: column;
             font-family: 'montserrat';
             font-weight: lighter;
-            color: $clr-dark;
+            color: $bg-dark;
         }
     }
 }
@@ -105,7 +105,7 @@
                     display: flex;
                     flex-direction:column;
                     font-family: 'montserrat';
-                    color: $clr-dark;
+                    color: $bg-dark;
                 }
             }
             img{
@@ -123,12 +123,12 @@
 }
 .banner__4th{
     .banner__wrapper{
-        background-color: $clr-mingrey;
+        background-color: $bg-mingrey;
         height: 62rem;
         .banner__info{
             display: flex;
             flex-direction: column;
-            color: $clr-light;
+            color: $bg-light;
             gap: 6rem;
             padding: 4rem 4rem;
             h1{
@@ -154,20 +154,20 @@
                 max-width: fit-content;
                 transition: 0.5s ease;
                 a{
-                    color: $clr-dark;
+                    color: $bg-dark;
                     font-weight: bold;
                     font-size: small;
                     padding: 2rem 5rem;
-                    background-color: $clr-light;
+                    background-color: $bg-light;
                 }
                 a:hover{
-                    background-color: $clr-brown;
-                    color: $clr-light;
+                    background-color: $bg-brown;
+                    color: $bg-light;
                 }
             }
             .buy__btn:hover{
                 transform: translate(0,-10px);
-                color: $clr-brown;
+                color: $bg-brown;
                 transition: 0.5s ease;
             }
         }
@@ -235,17 +235,12 @@
 }
 .banner__6th{
     padding: 14rem 0;
-    background-color: $clr-eggwhite;
+    background-color: $bg-eggwhite;
     .banner__profile{
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 5rem;
-        .profile__image{
-            display: flex;
-            justify-content: center;
-            padding: 2rem;
-        }
         .profile__info{
             display: flex;
             flex-direction: column;
@@ -256,14 +251,14 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                color: $clr-dark;
+                color: $bg-dark;
                 padding: 0 2rem;
                 text-align: center;
             }
             h1{
                 font-family: 'roboto slab';
                 font-size: x-large;
-                color: $clr-dark;
+                color: $bg-dark;
             }
         }
     }
@@ -271,14 +266,14 @@
 .banner__7th{
     padding: 10rem 0;
     .banner__wrapper{
-        background-color: $clr-light;
+        background-color: $bg-light;
         height: 62rem;
         padding: 0 3rem;
         .banner__info{
             display: flex;
             flex-direction: column;
             align-items: center;
-            color: $clr-dark;
+            color: $bg-dark;
             gap: 3rem;
             padding: 4rem 0rem;
             h6{
@@ -311,21 +306,21 @@
                 max-width: fit-content;
                 transition: 0.5s ease;
                 a{
-                    color: $clr-light;
+                    color: $bg-light;
                     font-weight: bold;
                     font-size: small;
                     padding: 2rem 5rem;
-                    background-color: $clr-brown;
+                    background-color: $bg-brown;
                 }
                 a:hover{
-                    background-color: $clr-light;
-                    color: $clr-brown;
-                    border: 1px solid $clr-brown;
+                    background-color: $bg-light;
+                    color: $bg-brown;
+                    border: 1px solid $bg-brown;
                 }
             }
             .buy__btn:hover{
                 transform: translate(0,-10px);
-                color: $clr-brown;
+                color: $bg-brown;
                 transition: 0.5s ease;
             }
         }
@@ -366,26 +361,26 @@
                 position: relative;
                 flex-direction: column;
                 justify-content: center;    
-                padding: 0 33rem;
+                padding: 0 18rem;
                 h6{
-                    color: $clr-light;
+                    color: $bg-light
                 }
                 h1{
-                    color: $clr-light;
+                    color: $bg-light;
                     font-size: 6rem;
                     padding-right: 70rem;
                     display: unset;
                 }
                 a{
-                    color: $clr-light;
+                    color: $bg-light;
                     font-weight: bold;
                     font-size: small;
                     padding: 1.5rem 5rem;
                 }
                 .a:hover{
                     transform: translate(0,-10px);
-                    background-color: $clr-light;
-                    color: $clr-brown;
+                    background-color: $bg-light;
+                    color: $bg-brown;
                     transition: 0.5s ease;
                 }
             }
@@ -433,7 +428,7 @@
                     text-align: left;
                     display: unset;
                     padding-right: 7rem;
-                    color:$clr-dark;
+                    color:$bg-dark;
                     line-height: 4rem;
                 }
                 .p__texts{
@@ -470,14 +465,14 @@
     }
     .banner__4th{
         .banner__wrapper{
-            background-color: $clr-mingrey;
+            background-color: $bg-mingrey;
             height: 62rem;
             display: grid;
             grid-template-columns: 1fr 1fr;
             .banner__info{
                 display: flex;
                 flex-direction: column;
-                color: $clr-light;
+                color: $bg-light;
                 gap: 5rem;
                 padding: 14rem 15.9rem 14rem 11rem;
                 h1{
@@ -500,20 +495,20 @@
                     max-width: fit-content;
                     transition: 0.5s ease;
                     a{
-                        color: $clr-dark;
+                        color: $bg-dark;
                         font-weight: bold;
                         font-size: small;
                         padding: 2rem 5rem;
-                        background-color: $clr-light
+                        background-color: $bg-light;
                     }
                     a:hover{
-                        background-color: $clr-brown;
-                        color: $clr-light;
+                        background-color: $bg-brown;
+                        color: $bg-light;
                     }
                 }
                 .buy__btn:hover{
                     transform: translate(0,-10px);
-                    color: $clr-brown;
+                    color: $bg-brown;
                     transition: 0.5s ease;
                 }
             }
@@ -582,28 +577,26 @@
         }
     }   
     .banner__6th{
-        padding: 15rem 30rem;
-        background-color: $clr-eggwhite;
-        display:flex;
+        padding: 13rem 0;
+        background-color: $bg-eggwhite;
         .banner__profile{
             display: flex;
             flex-direction: column;
             align-items: center;
-            .profile__image{
-                display: flex;
-                justify-content: center;
-                padding: 2rem;
-            }
+            gap: 3rem;
             .profile__info{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 gap: 3rem;
                 font-family: 'montserrat';
+                p{
+                    
+                }
                 h1{
                     font-family: 'roboto slab';
                     font-size: x-large;
-                    color: $clr-dark;
+                    color: $bg-dark;
                 }
             }
         }
@@ -611,7 +604,7 @@
     .banner__7th{
         padding: 10rem 30rem;
         .banner__wrapper{
-            background-color: $clr-light;
+            background-color: $bg-light;
             height: unset;
             padding: unset;
             display: grid;
@@ -621,7 +614,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: unset;
-                color: $clr-dark;
+                color: $bg-dark;
                 gap: 3rem;
                 padding: unset;
                 padding-bottom: 6rem;
@@ -649,21 +642,21 @@
                     max-width: fit-content;
                     transition: 0.5s ease;
                     a{
-                        color: $clr-light;
+                        color: $bg-light;
                         font-weight: bold;
                         font-size: small;
                         padding: 2rem 5rem;
-                        background-color: $clr-brown;
+                        background-color: $bg-brown;
                     }
                     a:hover{
-                        background-color: $clr-light;
-                        color: $clr-brown;
-                        border: 1px solid $clr-brown;
+                        background-color: $bg-light;
+                        color: $bg-brown;
+                        border: 1px solid $bg-brown;
                     }
                 }
                 .buy__btn:hover{
                     transform: translate(0,-10px);
-                    color: $clr-brown;
+                    color: $bg-brown;
                     transition: 0.5s ease;
                 }
             }
@@ -681,11 +674,11 @@
                     font-family: 'roboto slab';
                     font-size: 2.6rem;
                     text-align: center;
-                    display: fzlex;
+                    display: flex;
                     flex-direction: column;
                     align-items: flex-start;
                     line-height: 1.5;
-                    color: $clr-dark;
+                    color: $bg-dark;
                 }
             }
         }
