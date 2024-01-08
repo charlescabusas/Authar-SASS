@@ -115,6 +115,22 @@ img {
   max-width: 100%;
 }
 
+.body__wrapper {
+  overflow-x: hidden;
+  z-index: 0;
+}
+
+.footer__container {
+  max-width: 130rem;
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0 auto;
+}
+
+.item__container .i1 {
+  background-image: url(https://cms.code4rest.com/wp19/2023/11/08/laurie-petrou-on-editing-her-debut-novel/);
+}
+
 .footer {
   position: relative;
   background: rgb(29, 29, 29);
@@ -212,17 +228,32 @@ img {
   font-weight: 600;
   font-family: "montserrat";
   font-size: small;
-  z-index: 2;
+  z-index: 0;
 }
 .header .container {
-  max-width: 40rem;
-  padding: 1rem 0;
+  padding: 2rem;
   margin: 0 auto;
 }
 .header .container .header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.header .container .header__wrapper .menu__overlay {
+  top: 0;
+  position: fixed;
+  background-color: black;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.header .container .header__wrapper .menu__overlay.open {
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  opacity: 0.5;
+  z-index: 8;
+  transition: 0.5s ease;
 }
 .header .container .header__wrapper .social__icons {
   display: none;
@@ -245,13 +276,7 @@ img {
 .header .container .header__wrapper .burger__btn:hover span {
   background-color: #7f5f42;
 }
-.header .container .header__wrapper .nav__first__part {
-  display: none;
-}
-.header .container .header__wrapper .nav__second__part {
-  display: none;
-}
-.header .container .header__wrapper .nav__pages {
+.header .container .header__wrapper .nav__first__part, .header .container .header__wrapper .nav__second__part, .header .container .header__wrapper .nav__pages {
   display: none;
 }
 .header .container .header__wrapper .search__btn {
@@ -265,144 +290,18 @@ img {
   right: -200rem;
   width: 90%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   background-color: black;
   top: 0;
   transition: 0.5s ease;
   display: flex;
   flex-direction: column;
-}
-.header .container .header__wrapper .header__nav .nav__first__part {
-  display: flex;
-  flex-direction: column;
-}
-.header .container .header__wrapper .header__nav .nav__second__part {
-  display: flex;
-  flex-direction: column;
-}
-.header .container .header__wrapper .header__nav .burger__btn__close {
-  display: flex;
-  gap: 0.3rem;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-  margin-right: 3rem;
-  opacity: 0;
-}
-.header .container .header__wrapper .header__nav .burger__btn__close span {
-  background-color: black;
-  width: 0rem;
-  height: 0rem;
-  border-radius: 10rem;
-  transition: 0.5s ease;
-}
-.header .container .header__wrapper .header__nav a {
-  color: white;
-  font-weight: bold;
-  font-size: small;
-  padding: 1.4rem 1rem;
-  margin: 0 2rem;
-  border-bottom: 0.1px solid rgb(23, 23, 23);
-  gap: 1.8rem;
-}
-.header .container .header__wrapper .header__nav .nav__pages {
-  display: flex;
-  flex-direction: column;
-}
-.header .container .header__wrapper .header__nav .nav__pages h4 {
-  color: white;
-  border-bottom: 0.1px solid rgb(23, 23, 23);
-  font-weight: bold;
-  font-size: small;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 1rem;
-  margin: 0 2rem;
-}
-.header .container .header__wrapper .header__nav .nav__pages h4 i {
-  border-left: 0.1px solid rgb(23, 23, 23);
-  padding: 1.8rem 1rem;
-  font-size: xx-small;
-}
-.header .container .header__wrapper .header__nav .nav__pages h4 i.open {
-  transform: rotate(180deg);
-  border-left: unset;
-  border-right: 0.1px solid rgb(23, 23, 23);
-}
-.header .container .header__wrapper .header__nav .nav__pages ul {
-  max-height: 0rem;
-  overflow: hidden;
-}
-.header .container .header__wrapper .header__nav .nav__pages ul li {
-  padding: 1.4rem 1rem;
-  border-bottom: 0.1px solid rgb(23, 23, 23);
-}
-.header .container .header__wrapper .header__nav .nav__pages ul li a {
-  padding: unset;
-  margin: unset;
-  color: white;
-  font-weight: bold;
-  font-size: small;
-  border-bottom: unset;
-}
-.header .container .header__wrapper .header__nav .nav__pages ul.open {
-  max-height: 90rem;
-  overflow: unset;
-  margin-left: 4rem;
-  margin-right: 2rem;
-}
-.header .container .header__wrapper .header__nav .nav__pages:hover {
-  display: flex;
-  flex-direction: column;
-}
-.header .container .header__wrapper .header__nav .nav__pages:hover h4 {
-  color: white;
-  border-bottom: 0.1px solid rgb(23, 23, 23);
-  font-weight: bold;
-  font-size: small;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 1rem;
-  margin: 0 2rem;
-}
-.header .container .header__wrapper .header__nav .nav__pages:hover h4 i {
-  border-left: 0.1px solid rgb(23, 23, 23);
-  padding: 1.8rem 1rem;
-  font-size: xx-small;
-}
-.header .container .header__wrapper .header__nav .nav__pages:hover h4 i.open {
-  transform: rotate(180deg);
-  border-left: unset;
-  border-right: 0.1px solid rgb(23, 23, 23);
-}
-.header .container .header__wrapper .header__nav .nav__pages:hover ul {
-  max-height: 0rem;
-  overflow: hidden;
-}
-.header .container .header__wrapper .header__nav .nav__pages:hover ul li {
-  padding: 1.4rem 1rem;
-  border-bottom: 0.1px solid rgb(23, 23, 23);
-}
-.header .container .header__wrapper .header__nav .nav__pages:hover ul li a {
-  padding: unset;
-  margin: unset;
-  color: white;
-  font-weight: bold;
-  font-size: small;
-  border-bottom: unset;
-}
-.header .container .header__wrapper .header__nav .nav__pages:hover ul.open {
-  max-height: 90rem;
-  overflow: unset;
-  margin-left: 4rem;
-  margin-right: 2rem;
+  z-index: 10;
 }
 .header .container .header__wrapper .header__nav.open {
   right: 0;
   transition: 0.5s ease;
+  background-color: black;
 }
 .header .container .header__wrapper .header__nav.open .burger__btn__close {
   opacity: unset;
@@ -428,11 +327,6 @@ img {
     background-color: white;
     position: relative;
   }
-  .header .container {
-    max-width: 175rem;
-    padding: 1rem 0;
-    margin: 0 auto;
-  }
   .header__wrapper .branding img {
     width: 191px;
     height: auto;
@@ -448,11 +342,21 @@ img {
     justify-content: space-between;
     align-items: center;
   }
+  .header .container .header__wrapper .social__icons {
+    display: flex;
+  }
+  .header .container .header__wrapper .social__icons i:hover {
+    color: #7f5f42;
+    transition: 0.5s ease;
+  }
+  .header .container .header__wrapper .social__icons i {
+    padding: 1rem;
+  }
   .header .container .header__wrapper .nav__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 37rem;
+    gap: 30rem;
   }
   .header .container .header__wrapper .nav__wrapper .social__icons {
     display: flex;
@@ -468,6 +372,8 @@ img {
     display: flex;
     align-items: center;
     gap: 7rem;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
   }
   .header .container .header__wrapper .nav__wrapper .nav__links a {
     color: black;
@@ -481,15 +387,10 @@ img {
     gap: 3.6rem;
     align-items: center;
   }
-  .header .container .header__wrapper .nav__wrapper .nav__links .nav__pages {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .header .container .header__wrapper .nav__wrapper .nav__links .nav__pages .nav__first__part {
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part .nav__pages {
     display: flex;
   }
-  .header .container .header__wrapper .nav__wrapper .nav__links .nav__pages h4 {
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part .nav__pages h4 {
     color: black;
     font-weight: bold;
     font-size: small;
@@ -499,54 +400,43 @@ img {
     gap: 0.5rem;
     margin: 5rem 0;
   }
-  .header .container .header__wrapper .nav__wrapper .nav__links .nav__pages h4 i {
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part .nav__pages h4 i {
     font-size: xx-small;
   }
-  .header .container .header__wrapper .nav__wrapper .nav__links .nav__pages h4 i.open {
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part .nav__pages h4 i.open {
     transform: rotate(180deg);
   }
-  .header .container .header__wrapper .nav__wrapper .nav__links .nav__pages ul {
-    margin-left: 10rem;
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part .nav__pages .dropdown {
     position: absolute;
-    top: 12rem;
-    display: none;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    top: 100%;
+    opacity: 0;
   }
-  .header .container .header__wrapper .nav__wrapper .nav__links .nav__pages ul li {
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part .nav__pages .dropdown a {
     background-color: #7f5f42;
     border-bottom: 1px solid #f4f3ec;
-    padding: 1.5rem 8rem 1.5rem 2rem;
-  }
-  .header .container .header__wrapper .nav__wrapper .nav__links .nav__pages ul li a {
     color: white;
-  }
-  .header .container .header__wrapper .nav__wrapper .nav__links .nav__pages ul li:hover {
-    background-color: #f4f3ec;
     transition: 0.5s ease;
+    padding: 1.5rem 8rem 1.5rem 2rem;
+    z-index: 100;
   }
-  .header .container .header__wrapper .nav__wrapper .nav__links .nav__pages ul li:hover a {
-    color: black;
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part .nav__pages .dropdown a:hover {
+    background-color: #f4f3ec;
   }
-  .header .container .header__wrapper .nav__wrapper .nav__links .nav__pages:hover ul:hover {
-    display: unset;
-    top: 14rem;
-    transition: 0.2s ease;
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part .nav__pages .dropdown.open {
     opacity: 1;
   }
-  .header .container .header__wrapper .nav__wrapper .nav__links .nav__pages:hover h4 {
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part .nav__pages:hover .dropdown.open {
+    opacity: 1;
+  }
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part .nav__pages:hover h4 {
     color: #7f5f42;
     transition: 0.5s ease;
   }
-  .header .container .header__wrapper .nav__wrapper .nav__links .nav__pages:hover h4 i {
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part .nav__pages:hover h4 i {
     translate: rotate(180deg);
-  }
-  .header .container .header__wrapper .nav__wrapper .nav__links .nav__links:hover ul {
-    top: 14.1rem;
-    display: block;
-    max-height: -moz-fit-content;
-    max-height: fit-content;
-    overflow: unset;
-    transition: 0.2s ease;
-    opacity: 1;
   }
   .header .container .header__wrapper .nav__wrapper .nav__links .branding img {
     width: 191px;
@@ -561,690 +451,5 @@ img {
   }
   .header .container .header__wrapper .header__nav {
     display: none;
-  }
-}
-.banner__1st {
-  font-family: "montserrat", "roboto slab";
-}
-.banner__1st .home__bg {
-  height: 70rem;
-  background-size: cover;
-  background-position: center center;
-  background-image: url("../images/slide-01.jpg");
-}
-.banner__1st .home__bg .home__texts {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 70rem;
-  padding: 20rem 2rem;
-  gap: 5rem;
-}
-.banner__1st .home__bg .home__texts h6 {
-  color: white;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-.banner__1st .home__bg .home__texts h1 {
-  color: white;
-  font-size: 65px;
-  font-family: "roboto slab";
-  line-height: 6rem;
-  display: flex;
-  flex-direction: column;
-}
-.banner__1st .home__bg .home__texts .buy__btn {
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  transition: 0.5s ease;
-}
-.banner__1st .home__bg .home__texts .buy__btn a {
-  color: white;
-  font-weight: bold;
-  font-size: small;
-  padding: 2rem 5rem;
-  max-width: 10rem;
-  background-color: #7f5f42;
-}
-.banner__1st .home__bg .home__texts .buy__btn a:hover {
-  background-color: white;
-  color: #7f5f42;
-}
-.banner__1st .home__bg .home__texts .buy__btn:hover {
-  transform: translate(0, -10px);
-  color: #7f5f42;
-  transition: 0.5s ease;
-}
-
-.banner__2nd {
-  background-color: #f4f3ec;
-}
-.banner__2nd .banner__wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
-  padding: 10rem 3rem;
-  align-items: center;
-}
-.banner__2nd .banner__wrapper h1 {
-  font-size: 5rem;
-  font-family: "roboto slab";
-}
-.banner__2nd .banner__wrapper p {
-  padding-top: 3rem;
-  line-height: 1.8;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-  font-family: "montserrat";
-  font-weight: lighter;
-  color: black;
-}
-
-.banner__3rd .banner__wrapper {
-  display: flex;
-  flex-direction: column;
-  padding: 15rem 3rem;
-  align-items: center;
-  gap: 2rem;
-}
-.banner__3rd .banner__wrapper .banner__info {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  align-items: center;
-}
-.banner__3rd .banner__wrapper .banner__info h1 {
-  font-family: "roboto slab";
-  font-size: 2.8rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-}
-.banner__3rd .banner__wrapper .banner__info .p__texts {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-.banner__3rd .banner__wrapper .banner__info .p__texts p {
-  font-size: 1.5rem;
-  line-height: 2;
-  font-weight: lighter;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  font-family: "montserrat";
-  color: black;
-}
-.banner__3rd .banner__wrapper .banner__info img {
-  width: 10rem;
-}
-.banner__3rd .banner__wrapper img {
-  transition: 0.5s ease;
-}
-.banner__3rd .banner__wrapper img:hover {
-  transform: scale(0.9);
-  transition: 0.5s ease;
-}
-
-.banner__4th .banner__wrapper {
-  background-color: #222222;
-  height: 62rem;
-}
-.banner__4th .banner__wrapper .banner__info {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  gap: 6rem;
-  padding: 4rem 4rem;
-}
-.banner__4th .banner__wrapper .banner__info h1 {
-  font-size: 5rem;
-  font-family: "roboto slab";
-  line-height: 5rem;
-  display: flex;
-  flex-direction: column;
-}
-.banner__4th .banner__wrapper .banner__info .p__texts {
-  gap: 1rem;
-  line-height: 1.8;
-  font-family: "montserrat";
-  display: flex;
-  flex-direction: column;
-}
-.banner__4th .banner__wrapper .banner__info .p__texts p {
-  display: flex;
-  flex-direction: column;
-}
-.banner__4th .banner__wrapper .banner__info .buy__btn {
-  margin-top: 2rem;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  transition: 0.5s ease;
-}
-.banner__4th .banner__wrapper .banner__info .buy__btn a {
-  color: black;
-  font-weight: bold;
-  font-size: small;
-  padding: 2rem 5rem;
-  background-color: white;
-}
-.banner__4th .banner__wrapper .banner__info .buy__btn a:hover {
-  background-color: #7f5f42;
-  color: white;
-}
-.banner__4th .banner__wrapper .banner__info .buy__btn:hover {
-  transform: translate(0, -10px);
-  color: #7f5f42;
-  transition: 0.5s ease;
-}
-.banner__4th .banner__wrapper img {
-  display: none;
-}
-
-.banner__5th .banner__wrapper {
-  padding: 10rem 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5rem;
-}
-.banner__5th .banner__wrapper h1 {
-  font-family: "roboto slab";
-  font-size: 5rem;
-}
-.banner__5th .banner__wrapper img {
-  transition: 0.5s ease;
-}
-.banner__5th .banner__wrapper img:hover {
-  filter: grayscale(100%) brightness(60%);
-  transition: 0.5s ease;
-}
-.banner__5th .banner__wrapper .banner__img .image__1 {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-  padding: 2rem 0;
-}
-.banner__5th .banner__wrapper .banner__img .image__1 h2 {
-  font-family: "roboto slab";
-  font-size: 3rem;
-}
-.banner__5th .banner__wrapper .banner__img .image__2 {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-  padding: 2rem 0;
-}
-.banner__5th .banner__wrapper .banner__img .image__2 h2 {
-  font-family: "roboto slab";
-  font-size: 3rem;
-}
-.banner__5th .banner__wrapper .banner__img .image__3 {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-  padding: 2rem 0;
-}
-.banner__5th .banner__wrapper .banner__img .image__3 h2 {
-  font-family: "roboto slab";
-  font-size: 3rem;
-}
-
-.banner__6th {
-  padding: 14rem 0;
-  background-color: #f4f3ec;
-}
-.banner__6th .banner__profile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5rem;
-}
-.banner__6th .banner__profile .profile__image {
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
-}
-.banner__6th .banner__profile .profile__info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
-  font-family: "montserrat";
-}
-.banner__6th .banner__profile .profile__info p {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: black;
-  padding: 0 2rem;
-  text-align: center;
-}
-.banner__6th .banner__profile .profile__info h1 {
-  font-family: "roboto slab";
-  font-size: x-large;
-  color: black;
-}
-
-.banner__7th {
-  padding: 10rem 0;
-}
-.banner__7th .banner__wrapper {
-  background-color: white;
-  height: 62rem;
-  padding: 0 3rem;
-}
-.banner__7th .banner__wrapper .banner__info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: black;
-  gap: 3rem;
-  padding: 4rem 0rem;
-}
-.banner__7th .banner__wrapper .banner__info h6 {
-  font-family: "montserrat";
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #222222;
-}
-.banner__7th .banner__wrapper .banner__info h1 {
-  font-size: 5rem;
-  font-family: "roboto slab";
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.banner__7th .banner__wrapper .banner__info .p__texts {
-  gap: 1rem;
-  line-height: 1.5;
-  font-family: "montserrat";
-  display: flex;
-  flex-direction: column;
-}
-.banner__7th .banner__wrapper .banner__info .p__texts p {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.banner__7th .banner__wrapper .banner__info .buy__btn {
-  margin-top: 2rem;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  transition: 0.5s ease;
-}
-.banner__7th .banner__wrapper .banner__info .buy__btn a {
-  color: white;
-  font-weight: bold;
-  font-size: small;
-  padding: 2rem 5rem;
-  background-color: #7f5f42;
-}
-.banner__7th .banner__wrapper .banner__info .buy__btn a:hover {
-  background-color: white;
-  color: #7f5f42;
-  border: 1px solid #7f5f42;
-}
-.banner__7th .banner__wrapper .banner__info .buy__btn:hover {
-  transform: translate(0, -10px);
-  color: #7f5f42;
-  transition: 0.5s ease;
-}
-.banner__7th .banner__wrapper .banner__image {
-  display: flex;
-  align-items: center;
-}
-.banner__7th .banner__wrapper .banner__image img {
-  transition: 0.5s ease;
-}
-.banner__7th .banner__wrapper .banner__image img:hover {
-  transition: 0.5s ease;
-  transform: scale(0.9);
-}
-.banner__7th .banner__wrapper .banner__quote {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4rem;
-}
-.banner__7th .banner__wrapper .banner__quote h3 {
-  font-family: "roboto slab";
-  font-size: 2.45rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  line-height: 1.5;
-}
-
-@media screen and (min-width: 1026px) {
-  .banner__1st .home__bg {
-    background-attachment: fixed;
-  }
-  .banner__1st .home__bg .home__texts {
-    gap: 5rem;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 33rem;
-  }
-  .banner__1st .home__bg .home__texts h6 {
-    color: white;
-  }
-  .banner__1st .home__bg .home__texts h1 {
-    color: white;
-    font-size: 6rem;
-    padding-right: 70rem;
-    display: unset;
-  }
-  .banner__1st .home__bg .home__texts a {
-    color: white;
-    font-weight: bold;
-    font-size: small;
-    padding: 1.5rem 5rem;
-  }
-  .banner__1st .home__bg .home__texts .a:hover {
-    transform: translate(0, -10px);
-    background-color: white;
-    color: #7f5f42;
-    transition: 0.5s ease;
-  }
-  .banner__2nd .banner__wrapper {
-    display: flex;
-    gap: 5rem;
-    padding: 10rem 15rem;
-    align-items: center;
-  }
-  .banner__2nd .banner__wrapper .banner__info {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 3rem;
-  }
-  .banner__2nd .banner__wrapper .banner__info h1 {
-    font-size: 5rem;
-    font-family: "roboto slab";
-  }
-  .banner__2nd .banner__wrapper .banner__info p {
-    line-height: 2;
-    display: unset;
-    text-align: left;
-    font: "sans seriff";
-    font-weight: lighter;
-    word-spacing: 1.5;
-  }
-  .banner__3rd .banner__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    padding: 14rem;
-  }
-  .banner__3rd .banner__wrapper .banner__info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4rem;
-  }
-  .banner__3rd .banner__wrapper .banner__info h1 {
-    font-family: "roboto slab";
-    font-size: 2.6rem;
-    text-align: left;
-    display: unset;
-    padding-right: 7rem;
-    color: black;
-    line-height: 4rem;
-  }
-  .banner__3rd .banner__wrapper .banner__info .p__texts {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .banner__3rd .banner__wrapper .banner__info .p__texts p {
-    font-size: 1.5rem;
-    line-height: 2;
-    font-weight: lighter;
-    text-align: left;
-    display: unset;
-    font-family: "montserrat";
-  }
-  .banner__3rd .banner__wrapper .banner__info .p__texts .a {
-    padding-right: 6rem;
-  }
-  .banner__3rd .banner__wrapper .banner__info .p__texts .b {
-    padding-right: 3rem;
-  }
-  .banner__3rd .banner__wrapper .banner__info img {
-    width: 12rem;
-  }
-  .banner__3rd .banner__wrapper img {
-    transition: 0.5s ease;
-  }
-  .banner__3rd .banner__wrapper img:hover {
-    transform: scale(0.9);
-    transition: 0.5s ease;
-  }
-  .banner__4th .banner__wrapper {
-    background-color: #222222;
-    height: 62rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .banner__4th .banner__wrapper .banner__info {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    gap: 5rem;
-    padding: 14rem 15.9rem 14rem 11rem;
-  }
-  .banner__4th .banner__wrapper .banner__info h1 {
-    font-size: 5rem;
-    font-family: "roboto slab";
-    display: unset;
-  }
-  .banner__4th .banner__wrapper .banner__info .p__texts {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    line-height: 2;
-  }
-  .banner__4th .banner__wrapper .banner__info .p__texts p {
-    display: unset;
-    font-size: 15px;
-  }
-  .banner__4th .banner__wrapper .banner__info .buy__btn {
-    margin-top: 2rem;
-    max-width: -moz-fit-content;
-    max-width: fit-content;
-    transition: 0.5s ease;
-  }
-  .banner__4th .banner__wrapper .banner__info .buy__btn a {
-    color: black;
-    font-weight: bold;
-    font-size: small;
-    padding: 2rem 5rem;
-    background-color: white;
-  }
-  .banner__4th .banner__wrapper .banner__info .buy__btn a:hover {
-    background-color: #7f5f42;
-    color: white;
-  }
-  .banner__4th .banner__wrapper .banner__info .buy__btn:hover {
-    transform: translate(0, -10px);
-    color: #7f5f42;
-    transition: 0.5s ease;
-  }
-  .banner__4th .banner__wrapper img {
-    display: unset;
-    height: 62rem;
-  }
-  .banner__5th .banner__wrapper {
-    padding: 10rem 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5rem;
-  }
-  .banner__5th .banner__wrapper h1 {
-    font-family: "roboto slab";
-    font-size: 5rem;
-  }
-  .banner__5th .banner__wrapper .banner__img {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 3rem;
-  }
-  .banner__5th .banner__wrapper .banner__img img {
-    transition: 0.5s ease;
-  }
-  .banner__5th .banner__wrapper .banner__img img:hover {
-    filter: grayscale(100%);
-    transition: 0.5s ease;
-  }
-  .banner__5th .banner__wrapper .banner__img .image__1 {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: flex-start;
-    padding: 2rem 0;
-  }
-  .banner__5th .banner__wrapper .banner__img .image__1 h2 {
-    font-family: "roboto slab";
-    font-size: 3rem;
-  }
-  .banner__5th .banner__wrapper .banner__img .image__2 {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: flex-start;
-    padding: 2rem 0;
-  }
-  .banner__5th .banner__wrapper .banner__img .image__2 h2 {
-    font-family: "roboto slab";
-    font-size: 3rem;
-  }
-  .banner__5th .banner__wrapper .banner__img .image__3 {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: flex-start;
-    padding: 2rem 0;
-  }
-  .banner__5th .banner__wrapper .banner__img .image__3 h2 {
-    font-family: "roboto slab";
-    font-size: 3rem;
-  }
-  .banner__6th {
-    padding: 15rem 30rem;
-    background-color: #f4f3ec;
-    display: flex;
-  }
-  .banner__6th .banner__profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .banner__6th .banner__profile .profile__image {
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
-  }
-  .banner__6th .banner__profile .profile__info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-    font-family: "montserrat";
-  }
-  .banner__6th .banner__profile .profile__info h1 {
-    font-family: "roboto slab";
-    font-size: x-large;
-    color: black;
-  }
-  .banner__7th {
-    padding: 10rem 30rem;
-  }
-  .banner__7th .banner__wrapper {
-    background-color: white;
-    height: unset;
-    padding: unset;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-  }
-  .banner__7th .banner__wrapper .banner__info {
-    display: flex;
-    flex-direction: column;
-    align-items: unset;
-    color: black;
-    gap: 3rem;
-    padding: unset;
-    padding-bottom: 6rem;
-  }
-  .banner__7th .banner__wrapper .banner__info h1 {
-    font-size: 5rem;
-    font-family: "roboto slab";
-    display: flex;
-    flex-direction: column;
-    align-items: unset;
-  }
-  .banner__7th .banner__wrapper .banner__info .p__texts {
-    gap: 1rem;
-    line-height: 1.5;
-    font-family: "montserrat";
-    display: flex;
-    flex-direction: column;
-  }
-  .banner__7th .banner__wrapper .banner__info .p__texts p {
-    display: flex;
-    flex-direction: column;
-    align-items: unset;
-  }
-  .banner__7th .banner__wrapper .banner__info .buy__btn {
-    margin-top: 2rem;
-    max-width: -moz-fit-content;
-    max-width: fit-content;
-    transition: 0.5s ease;
-  }
-  .banner__7th .banner__wrapper .banner__info .buy__btn a {
-    color: white;
-    font-weight: bold;
-    font-size: small;
-    padding: 2rem 5rem;
-    background-color: #7f5f42;
-  }
-  .banner__7th .banner__wrapper .banner__info .buy__btn a:hover {
-    background-color: white;
-    color: #7f5f42;
-    border: 1px solid #7f5f42;
-  }
-  .banner__7th .banner__wrapper .banner__info .buy__btn:hover {
-    transform: translate(0, -10px);
-    color: #7f5f42;
-    transition: 0.5s ease;
-  }
-  .banner__7th .banner__wrapper .banner__image {
-    display: flex;
-    justify-content: center;
-  }
-  .banner__7th .banner__wrapper .banner__quote {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4rem;
-    padding-left: 2rem;
-  }
-  .banner__7th .banner__wrapper .banner__quote h3 {
-    font-family: "roboto slab";
-    font-size: 2.6rem;
-    text-align: center;
-    display: fzlex;
-    flex-direction: column;
-    align-items: flex-start;
-    line-height: 1.5;
-    color: black;
   }
 }/*# sourceMappingURL=main.css.map */

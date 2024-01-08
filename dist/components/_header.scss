@@ -4,15 +4,30 @@
     font-weight: 600;
     font-family: 'montserrat';
     font-size: small;
-    z-index: 2;
+    z-index: 0;
     .container{
-        max-width: 40rem;
-        padding: 1rem 0;
+        padding: 2rem;
         margin: 0 auto;
         .header__wrapper{
             display: flex;
             justify-content: space-between;
             align-items: center;
+            .menu__overlay{
+                top: 0;
+                position: fixed;
+                background-color: $clr-dark;
+                z-index: 1;
+                opacity: 0;
+                transition: 0.5s ease;
+            }
+            .menu__overlay.open{
+                height: 100vh;
+                width: 100%;
+                left: 0;
+                opacity: 0.5;
+                z-index: 8;
+                transition: 0.5s ease;
+            }
             .social__icons{
                 display: none;
             }
@@ -38,13 +53,7 @@
                     background-color: $clr-brown;
                 }
             }
-            .nav__first__part{
-                display: none;
-            }
-            .nav__second__part{
-                display: none;
-            }
-            .nav__pages{
+            .nav__first__part,.nav__second__part,.nav__pages{
                 display: none;
             }
             .search__btn{
@@ -58,144 +67,18 @@
                 right: -200rem;
                 width: 90%;
                 height: 100vh;
-                position: absolute;
+                position: fixed;
                 background-color: $clr-dark;
                 top: 0;
                 transition: 0.5s ease;
                 display: flex;
                 flex-direction: column;
-                .nav__first__part{
-                    display: flex;
-                    flex-direction: column;
-                }
-                .nav__second__part{
-                    display: flex;
-                    flex-direction: column;
-                }
-                .burger__btn__close{
-                    display: flex;
-                    gap: 0.3rem;
-                    flex-direction: column;
-                    align-items: flex-end;
-                    margin-top: 2rem;
-                    margin-bottom: 3rem;
-                    margin-right: 3rem;
-                    opacity: 0;
-                    span{
-                        background-color: $clr-dark;
-                        width: 0rem;
-                        height: 0rem;
-                        border-radius: 10rem;
-                        transition: 0.5s ease;
-                    }
-                }
-                a{
-                    color: $clr-light;
-                    font-weight: bold;
-                    font-size: small;
-                    padding: 1.4rem 1rem;
-                    margin: 0 2rem;
-                    border-bottom: 0.1px solid rgb(23, 23, 23);
-                    gap: 1.8rem;
-                }
-                .nav__pages{
-                    display: flex;
-                    flex-direction: column;
-                    h4{
-                        color: $clr-light;
-                        border-bottom: 0.1px solid rgb(23, 23, 23);
-                        font-weight: bold;
-                        font-size: small;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        padding-left: 1rem;
-                        margin: 0 2rem;
-                        i{
-                            border-left: 0.1px solid rgb(23, 23, 23);
-                            padding: 1.8rem 1rem;
-                            font-size: xx-small;  
-                        }
-                        i.open{
-                            transform: rotate(180deg);
-                            border-left: unset;
-                            border-right: 0.1px solid rgb(23, 23, 23);
-                        }  
-                    }
-                    ul{
-                        max-height: 0rem;
-                        overflow: hidden;
-                        li{
-                            padding: 1.4rem 1rem;
-                            border-bottom: 0.1px solid rgb(23, 23, 23);
-                            a{
-                                padding: unset;
-                                margin: unset ;
-                                color: $clr-light;
-                                font-weight: bold;
-                                font-size: small;
-                                border-bottom: unset;
-                            }
-                        }
-                    }
-                    ul.open{
-                        max-height: 90rem;
-                        overflow: unset;
-                        margin-left:4rem;
-                        margin-right: 2rem;
-                    }
-                }
-                .nav__pages:hover{
-                    display: flex;
-                    flex-direction: column;
-                    h4{
-                        color: $clr-light;
-                        border-bottom: 0.1px solid rgb(23, 23, 23);
-                        font-weight: bold;
-                        font-size: small;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        padding-left: 1rem;
-                        margin: 0 2rem;
-                        i{
-                            border-left: 0.1px solid rgb(23, 23, 23);
-                            padding: 1.8rem 1rem;
-                            font-size: xx-small;  
-                        }
-                        i.open{
-                            transform: rotate(180deg);
-                            border-left: unset;
-                            border-right: 0.1px solid rgb(23, 23, 23);
-                        }  
-                    }
-                    ul{
-                        max-height: 0rem;
-                        overflow: hidden;
-                        li{
-                            padding: 1.4rem 1rem;
-                            border-bottom: 0.1px solid rgb(23, 23, 23);
-                            a{
-                                padding: unset;
-                                margin: unset ;
-                                color: $clr-light;
-                                font-weight: bold;
-                                font-size: small;
-                                border-bottom: unset;
-                            }
-                        }
-                    }
-                    ul.open{
-                        max-height: 90rem;
-                        overflow: unset;
-                        margin-left:4rem;
-                        margin-right: 2rem;
-                    }
-                }
+                z-index: 10;
             }
             .header__nav.open{
                 right: 0;
                 transition: 0.5s ease;
+                background-color: black;
                 .burger__btn__close{
                     opacity: unset;
                     transition: 0.5s ease;
@@ -224,11 +107,6 @@
     .header{
         background-color:$clr-light ;
         position: relative;
-        .container{
-            max-width: 175rem;
-            padding: 1rem 0;
-            margin: 0 auto;
-        }
         &__wrapper{
             .branding{
                 img{
@@ -248,11 +126,21 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                .social__icons{
+                    display: flex;
+                    i:hover{
+                        color: $clr-brown;
+                        transition: 0.5s ease; 
+                    }
+                    i{
+                        padding: 1rem;
+                    }
+                }
                 .nav__wrapper{
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    gap: 37rem;
+                    gap: 30rem;
                     .social__icons{
                         display: flex;
                         i:hover{
@@ -267,6 +155,7 @@
                         display: flex;
                         align-items: center;
                         gap: 7rem;
+                        max-height: fit-content;
                         a{
                             color: $clr-dark;
                         }
@@ -278,76 +167,58 @@
                             display: flex;
                             gap: 3.6rem;  
                             align-items: center;
-                        }
-                        .nav__pages{
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            .nav__first__part{
-                                display:flex;
-                            }
-                            h4{
-                                color: $clr-dark;
-                                font-weight: bold;
-                                font-size: small;
+                            .nav__pages{
                                 display: flex;
-                                justify-content: space-between;
-                                align-items: center;
-                                gap: 0.5rem;
-                                margin: 5rem 0;
-                                i{
-                                    font-size: xx-small;
+                                h4{
+                                    color: $clr-dark;
+                                    font-weight: bold;
+                                    font-size: small;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    gap: 0.5rem;
+                                    margin: 5rem 0;
+                                    i{
+                                        font-size: xx-small;
+                                    }
+                                    i.open{
+                                        transform: rotate(180deg);
+                                    }  
                                 }
-                                i.open{
-                                    transform: rotate(180deg);
-                                }  
-                            }
-                            ul{ 
-                                margin-left: 10rem;
-                                position:absolute;
-                                top:12rem;
-                                display: none;
-                                li{
-                                    background-color: $clr-brown;
-                                    border-bottom: 1px solid $clr-eggwhite;
-                                    padding: 1.5rem 8rem 1.5rem 2rem;
+                                .dropdown{
+                                    position: absolute;
+                                    display: flex;
+                                    flex-direction: column;
+                                    z-index: 10;
+                                    top: 100%;
+                                    opacity: 0;
                                     a{
+                                        background-color: $clr-brown;
+                                        border-bottom: 1px solid $clr-eggwhite;
                                         color: $clr-light;
+                                        transition: 0.5s ease;
+                                        padding: 1.5rem 8rem 1.5rem 2rem;
+                                        z-index: 100;
+                                    }
+                                    a:hover{
+                                        background-color: $clr-eggwhite;
                                     }
                                 }
-                                li:hover{
-                                    background-color: $clr-eggwhite;
+                                .dropdown.open{
+                                    opacity: 1;
+                                }
+                            }
+                            .nav__pages:hover{
+                                .dropdown.open{
+                                    opacity: 1;
+                                }
+                                h4{
+                                    color:$clr-brown;
                                     transition: 0.5s ease;
-                                    a{
-                                        color: $clr-dark;
+                                    i{
+                                        translate: rotate(180deg);
                                     }
                                 }
-                                
-                            } 
-                        }
-                        .nav__pages:hover{
-                            ul:hover{
-                                display: unset;
-                                top: 14rem;
-                                transition: 0.2s ease;
-                                opacity: 1;
-                            }
-                            h4{
-                                color:$clr-brown;
-                                transition: 0.5s ease;
-                                i{
-                                    translate: rotate(180deg);
-                                }
-                            }
-                        }
-                        .nav__links:hover{
-                            ul{
-                                top: 14.1rem;
-                                display: block;
-                                max-height: fit-content;
-                                overflow: unset;
-                                transition: 0.2s ease;
-                                opacity: 1;
                             }
                         }
                         .branding{
