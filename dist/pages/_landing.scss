@@ -1,0 +1,1011 @@
+.main__body{
+    .banner{
+        font-family: 'montserrat', 'roboto slab';
+        .banner__bg{
+            height: 70rem;
+            background-position: center center;
+            background-image: url("../images/slide-01.jpg");
+            background-size: cover;
+            .banner__texts{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 70rem;
+                padding: 20rem 2rem;
+                gap: 5rem;
+                h6{
+                    color: $clr-light;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    text-align: left;
+                }
+                h1{
+                    color: $clr-light;
+                    font-size: 65px;
+                    font-family: 'roboto slab';
+                    line-height: 6rem;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                }
+                .buy__btn{
+                    max-width: fit-content;
+                    transition: 0.5s ease;
+                    a{
+                        color: $clr-light;
+                        font-weight: bold;
+                        font-size: small;
+                        padding: 2rem 5rem;
+                        max-width: 10rem;
+                        background-color: $clr-brown;
+                    }
+                    a:hover{
+                        background-color: $clr-light;
+                        color: $clr-brown;
+                    }
+                }
+                .buy__btn:hover{
+                    transform: translate(0,-10px);
+                    color: $clr-brown;
+                    transition: 0.5s ease;
+                }
+            }
+        }
+    }
+    .chapter__part{
+        background-color: $clr-eggwhite;
+        padding: 15rem 0;
+        .chapter__wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 170rem;
+            h1{
+                font-size: 5rem;
+                font-family: 'roboto slab';
+            }
+            p{
+                font-size: 1.6rem;
+                line-height: 1.8;
+                font-family: 'montserrat';
+                font-weight: lighter;
+                color: $clr-dark;
+                text-align: center;
+            }
+            .a{
+                padding: 3rem 6.7rem 0;
+            }
+            .b{
+                padding: 3rem 3.9rem 0;
+            }
+            .c{
+                padding: 3rem 5.4rem 0;
+            }
+        }
+    }
+    .book__title__henry__dog{
+        .book__title__wrapper{
+            display: flex;
+            flex-direction: column;
+            padding: 15rem 0rem;
+            align-items: center;
+            gap: 2rem;
+            margin: 0 auto;
+            max-width: 125rem;
+            .book__title__info{
+                display: flex;
+                flex-direction: column;
+                gap: 4rem;
+                align-items: center;
+                h1{
+                    display: flex;
+                    flex-direction: column;
+                    font-family: 'roboto slab';
+                    font-size: 2.8rem;
+                    text-align: center;
+                }
+                .p__texts{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    p{
+                        font-size: 1.5rem;
+                        line-height: 2;
+                        font-weight: lighter;
+                        text-align: center;
+                        display: flex;
+                        flex-direction:column;
+                        font-family: 'montserrat';
+                        color: $clr-dark;
+                    }
+                }
+                img{
+                    width: 10rem;
+                }
+            }
+            img{
+                transition: 0.5s ease;
+            }
+            img:hover{
+                transform: scale(0.9);
+                transition: 0.5s ease;
+            }
+        }
+    }
+    .awards__section{
+        .awards__wrapper{
+            background-color: $clr-mingrey;
+            height: 62rem;
+            .awards__img__container{
+                max-height: 100%;
+                .img{
+                    width: 100%;
+                    height: 100%;
+                    background-size: cover;
+                    background-position: center center;
+    
+                }
+            }
+            .awards__info{
+                display: flex;
+                flex-direction: column;
+                color: $clr-light;
+                gap: 6rem;
+                padding: 4rem;
+                h1{
+                    font-size: 5rem;
+                    font-family: 'roboto slab';
+                    line-height: 5rem;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .p__texts{
+                    gap:1rem;
+                    line-height: 1.8;
+                    font-family: 'montserrat';
+                    display: flex;
+                    flex-direction: column;
+                    p{
+                        display:flex;
+                        flex-direction: column;
+                    }
+                }
+                .buy__btn{
+                    margin-top: 2rem;
+                    max-width: fit-content;
+                    transition: 0.5s ease;
+                    a{
+                        color: $clr-dark;
+                        font-weight: bold;
+                        font-size: small;
+                        padding: 2rem 5rem;
+                        background-color: $clr-light;
+                    }
+                    a:hover{
+                        background-color: $clr-brown;
+                        color: $clr-light;
+                    }
+                }
+                .buy__btn:hover{
+                    transform: translate(0,-10px);
+                    color: $clr-brown;
+                    transition: 0.5s ease;
+                }
+            }
+            img{
+                display: none;
+            }
+    
+        }
+    }
+    .collection{
+        .collection__wrapper{
+            padding: 10rem 3rem;
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            gap: 5rem;
+            margin: 0 auto;
+            max-width: 170rem;
+            h1{
+                font-family: 'roboto slab';
+                font-size: 5rem;
+            }
+            img{
+                transition: 0.5s ease;
+            }   
+            img:hover{
+                filter: grayscale(100%) brightness(60%);
+                transition: 0.5s ease;
+                
+            }
+            .collection__img{
+                .image__1{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    align-items: center;
+                    padding: 2rem 0 ;
+                    h2{
+                        font-family: 'roboto slab';
+                        font-size: 3rem;
+                    }
+                }
+                .image__2{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    align-items: center;
+                    padding: 2rem 0 ;
+                    h2{
+                        font-family: 'roboto slab';
+                        font-size: 3rem;
+                    }
+                }
+                .image__3{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    align-items: center;
+                    padding: 2rem 0 ;
+                    h2{
+                        font-family: 'roboto slab';
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+    }
+    .profiling{
+        padding: 14rem 1rem;
+        background-color: $clr-eggwhite;
+        .profile__container{
+            .profile__wrapper{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 4rem;
+                .profile__image{
+                    display: flex;
+                    justify-content: center;
+                }
+                .profile__info{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 3rem;
+                    font-family: 'montserrat';
+                    p{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        color: $clr-dark;
+                        text-align: center;
+                        font-size: 1.55rem;
+                    }
+                    h1{
+                        font-family: 'roboto slab';
+                        font-size: x-large;
+                        color: $clr-dark;
+                    }
+                }
+            }
+        }
+    }
+    .author__month{
+        padding: 10rem 0;
+        .author__month__wrapper{
+            background-color: $clr-light;
+            height: 100%;
+            padding: 0 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+            .author__month__info{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: $clr-dark;
+                gap: 3rem;
+                padding: 4rem 0rem;
+                h6{
+                    font-family: 'montserrat';
+                    font-size: 1.4rem;
+                    font-weight: bold;
+                    color: #222222;
+                }
+                h1{
+                    font-size: 4rem;
+                    font-family: 'roboto slab';
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .p__texts{
+                    gap:1rem;
+                    line-height: 1.5;
+                    font-family: 'montserrat';
+                    display: flex;
+                    flex-direction: column;
+                    p{
+                        display:flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                }
+                .buy__btn{
+                    margin-top: 2rem;
+                    max-width: fit-content;
+                    transition: 0.5s ease;
+                    a{
+                        color: $clr-light;
+                        font-weight: bold;
+                        font-size: small;
+                        padding: 2rem 5rem;
+                        background-color: $clr-brown;
+                    }
+                    a:hover{
+                        background-color: $clr-light;
+                        color: $clr-brown;
+                        border: 1px solid $clr-brown;
+                    }
+                }
+                .buy__btn:hover{
+                    transform: translate(0,-10px);
+                    color: $clr-brown;
+                    transition: 0.5s ease;
+                }
+            }
+            .author__image{
+                display: flex;
+                align-items: center;
+                img{
+                    transition: 0.5s ease;
+                }
+                img:hover{
+                    transition: 0.5s ease;
+                    transform: scale(0.9);
+                }
+            }
+            .author__quote{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 4rem;
+                h3{
+                    font-family: 'roboto slab';
+                    font-size: 2.2rem;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+    .blog__lists{
+        background-color: $clr-eggwhite;
+        .blog__container{
+            padding: 13rem 0;
+            margin: 0 auto;
+            max-width: 170rem;
+            .blog__wrapper{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0 1rem;
+                .blog__title{
+                    padding-bottom: 8rem;
+                    h1{
+                        font-family: 'roboto slab'; 
+                        font-size: 5rem;
+                        color: $clr-dark;
+                    }
+                }
+                .blog__items{
+                    max-width: 130rem;
+                    overflow: hidden;
+                    width: 100%;
+                    .blog{      
+                        overflow: hidden;
+                        margin: 2rem;
+                        .blog__img{
+                            position: relative;
+                            width: 100%;
+                            overflow: hidden;
+                            .shading{
+                                background-color: $clr-brown;
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                opacity: 0;
+                                transition: 0.5s ease;
+                            }   
+                            img{
+                                height: 25rem;
+                                object-fit: fill;
+                                transition: 0.5s ease; 
+                            }
+                        }
+                        .blog__img:hover{
+                            img{
+                             transform: scale(1.1);
+                             transition: 0.5s ease; 
+                            }
+                        }
+                        .blog__info{
+                            padding: 2rem;
+                            background-color: $clr-light;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 2rem;
+                            h6{
+                                color: $clr-brown;
+                                font-family: 'montserrat';
+                                font-size: 1.4rem;
+                            }
+                            h2{
+                                font-family: 'roboto slab';
+                                font-size: 2.2rem;
+                                a{
+                                    color: $clr-dark;
+                                }
+                            }
+                            p{
+                                font-family: 'montserrat';
+                                font-size: 1.5rem;
+                                line-height: 1.5;
+                            }
+                        }
+                    }   
+                    .blog:hover{
+                        .blog__img{
+                            .shading{
+                                opacity: 0.4;
+                                transition: 0.5s ease;
+                                z-index: 10;
+                            }
+                        }
+                        h2{
+                            a{
+                                color: $clr-brown;
+                            }
+                        }
+                    }
+                }
+                .get__update{
+                    box-sizing: content-box;
+                    width: 100%;
+                    padding: 10rem 10rem 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap:10rem;           
+                    align-items: center;
+                    .get__update__texts{
+                        h1{
+                            font-family: 'roboto slab';
+                            font-size: 5.5rem;
+                            line-height: 2;
+                            }
+                        h6{
+                            font-family: 'montserrat';
+                            text-align: center;
+                            font-size: 1.5rem;
+                        }
+                    }
+                    .enter__email{
+                        display:flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 2rem;
+                        box-sizing: content-box;
+                        width: 100%;
+                        max-width: 50rem;
+                        
+                        input{
+                            border: none;
+                            border-bottom: 1px solid $clr-dark;
+                            background-color: $clr-eggwhite;
+                            padding: 1.5rem 1rem;
+                            text-align: center;
+                            width: 100%;
+                        }
+                        input:focus{
+                            outline: none;
+                        }
+                        input::placeholder{
+                            color: $clr-dark;
+                            font-family: 'montserrat';
+                            font-size: large;
+                        }
+                        a{
+                           background-color: $clr-brown;
+                           color: $clr-light;
+                           font-family: 'montserrat';
+                           text-align: center;
+                           width: 100%;
+                           padding: 2rem 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .amazon__discount{
+        .amazon__container{
+            max-width: 170rem;
+            padding: 3rem;
+            margin: 0 auto;
+            .content__wrapper{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 2rem;
+                h1{
+                    font-size: 2.5rem;
+                    font-family: 'roboto slab';
+                }
+                img{
+                    width: 20rem;
+                }
+            }
+        }
+    }
+    @include mediaQuery($break-mn){
+        .book__title__henry__dog{
+            .book__title__wrapper{
+                .book__title__info{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    h1{
+                        display: block;
+                    }
+                    .p__texts{
+                        display: flex;
+                        align-items: center;
+                        p{
+                            display: block;
+                        }
+                    }
+                    .a{
+                        max-width: 70rem;
+                    }
+                }
+            }
+        }
+        .awards__section{
+            .awards__wrapper{
+                .awards__info{
+                    max-width: 55rem;
+                    h1{
+                        font-size: 5rem;
+                        font-family: 'roboto slab';
+                        display: unset;
+                    }
+                    .p__texts{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                        line-height: 2;
+                        p{
+                            display:unset;
+                            font-size: 15px;
+                        }
+                    }
+                    .buy__btn{
+                        margin-top: 2rem;
+                        max-width: fit-content;
+                        transition: 0.5s ease;
+                        a{
+                            color: $clr-dark;
+                            font-weight: bold;
+                            font-size: small;
+                            padding: 2rem 5rem;
+                            background-color: $clr-light;
+                        }
+                        a:hover{
+                            background-color: $clr-brown;
+                            color: $clr-light;
+                        }
+                    }
+                    .buy__btn:hover{
+                        transform: translate(0,-10px);
+                        color: $clr-brown;
+                        transition: 0.5s ease;
+                    }
+                }
+                img{
+                    display: unset;
+                }
+            }
+        }
+        .author__month{
+            .author__month__wrapper{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 auto;
+                .author__month__info{
+                    h1{
+                        display: block;
+                        text-align: center;
+                    }
+                    .p__texts{
+                        p{
+                            display:block;
+                            text-align: center;
+                            max-width: 80rem;
+                        }
+                    }
+                    .buy__btn{
+                        margin-top: 2rem;
+                        max-width: fit-content;
+                        transition: 0.5s ease;
+                        a{
+                            color: $clr-light;
+                            font-weight: bold;
+                            font-size: small;
+                            padding: 2rem 5rem;
+                            background-color: $clr-brown;
+                        }
+                        a:hover{
+                            background-color: $clr-light;
+                            color: $clr-brown;
+                            border: 1px solid $clr-brown;
+                        }
+                    }
+                    .buy__btn:hover{
+                        transform: translate(0,-10px);
+                        color: $clr-brown;
+                        transition: 0.5s ease;
+                    }
+                }
+                .author__image{
+                    display: flex;
+                    align-items: center;
+                    img{
+                        transition: 0.5s ease;
+                    }
+                    img:hover{
+                        transition: 0.5s ease;
+                        transform: scale(0.9);
+                    }
+                }
+                .author__quote{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 4rem;
+                    h3{
+                        max-width: 70rem;
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        line-height: 2;
+                    }
+                }
+            }
+        }
+    }
+    @include mediaQuery($break-sm){
+        .awards__section{
+            .awards__wrapper{
+                background-color: $clr-mingrey;
+                height: 62rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                overflow: hidden;
+                .awards__img__container{
+                    max-height: 100%;
+                    background-image: url("../images/book-awards.jpg");
+                    background-size: cover;
+                    background-position: center center;
+                    height:auto;
+                }
+                .awards__info{
+                    display: flex;
+                    flex-direction: column;
+                    color: $clr-light;
+                    gap: 5rem;
+                    padding: 14rem 15.9rem 14rem 11rem;
+                    max-width: unset;
+                    h1{
+                        font-size: 5rem;
+                        font-family: 'roboto slab';
+                        display: unset;
+                    }
+                    .p__texts{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                        line-height: 2;
+                        p{
+                            display:unset;
+                            font-size: 15px;
+                        }
+                    }
+                    .buy__btn{
+                        margin-top: 2rem;
+                        max-width: fit-content;
+                        transition: 0.5s ease;
+                        a{
+                            color: $clr-dark;
+                            font-weight: bold;
+                            font-size: small;
+                            padding: 2rem 5rem;
+                            background-color: $clr-light
+                        }
+                        a:hover{
+                            background-color: $clr-brown;
+                            color: $clr-light;
+                        }
+                    }
+                    .buy__btn:hover{
+                        transform: translate(0,-10px);
+                        color: $clr-brown;
+                        transition: 0.5s ease;
+                    }
+                }
+                img{
+                    display: unset;
+                }
+            }
+        }
+    }
+    @include mediaQuery($break-md){
+        .banner{
+            .banner__bg{
+                background-attachment: fixed;
+                .banner__texts{
+                    gap: 5rem;
+                    display: flex;
+                    position: relative;
+                    flex-direction: column;
+                    justify-content: center;    
+                    padding: 0 33rem;
+                    margin: 0 auto;
+                    max-width: 180rem;
+                    h6{
+                        color: $clr-light;
+                    }
+                    h1{
+                        color: $clr-light;
+                        font-size: 6rem;
+                        padding-right: 70rem;
+                        display: unset;
+                    }
+                    a{
+                        color: $clr-light;
+                        font-weight: bold;
+                        font-size: small;
+                        padding: 1.5rem 5rem;
+                    }
+                    .a:hover{
+                        transform: translate(0,-10px);
+                        background-color: $clr-light;
+                        color: $clr-brown;
+                        transition: 0.5s ease;
+                    }
+                }
+            }
+        }
+        .chapter__part{
+            .chapter__wrapper{
+                display: flex;
+                gap: 5rem;
+                max-width: 145rem;
+                align-items: center;
+                .chapter__info{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    width: 100%;
+                    h1{
+                        font-size: 5rem;
+                        font-family: 'roboto slab';
+                    }
+                    p{
+                        line-height: 1.8;
+                        display: unset;
+                        text-align: left;
+                        font: 'sans seriff';
+                        font-weight: lighter;
+                        word-spacing: 0.3rem;
+                        
+                    }
+                }
+            }
+        }
+        .book__title__henry__dog{
+            .book__title__wrapper{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 15rem 5rem;
+                .book__title__info{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 4rem;
+                    h1{
+                        font-family: 'roboto slab';
+                        font-size: 2.6rem;
+                        text-align: left;
+                        display: unset;
+                        padding-right: 5rem;
+                        color:$clr-dark;
+                        line-height: 4rem;
+                    }
+                    .p__texts{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                        align-items: flex-start;
+                        p{
+                            font-size: 1.5rem;
+                            line-height: 2;
+                            font-weight: lighter;
+                            text-align: left;
+                            display: unset;
+                            font-family: 'montserrat';
+                        }
+                        .a{
+                            padding-right: 2rem;
+                        }
+                        .b{
+                            padding-right: 1rem;
+                        }
+                    }
+                    img{
+                        width: 12rem;
+                    }
+                }
+                img{
+                    transition: 0.5s ease;
+                }
+                img:hover{
+                    transform: scale(0.9);
+                    transition: 0.5s ease;
+                }
+            }
+        }
+        .collection{
+            .collection__wrapper{
+                padding: 10rem 3rem;
+                display: flex;
+                flex-direction: column; 
+                align-items: center;
+                gap: 5rem;
+                h1{
+                    font-family: 'roboto slab';
+                    font-size: 5rem;
+                }
+                .collection__img{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: 3rem;
+                    img{
+                        transition: 0.5s ease;
+                    }   
+                    img:hover{
+                        filter: grayscale(100%) brightness(60%);
+                         transition: 0.5s ease;
+                    }
+                    .image__1{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+                        align-items: flex-start;
+                        padding: 2rem 0;
+                        h2{
+                            font-family: 'roboto slab';
+                            font-size: 3rem;
+                        }
+                    }
+                    .image__2{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+                        align-items: flex-start;
+                        padding: 2rem 0;
+                        h2{
+                            font-family: 'roboto slab';
+                            font-size: 3rem;
+                        }
+                    }
+                    .image__3{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+                        align-items: flex-start;
+                        padding: 2rem 0;
+                        h2{
+                            font-family: 'roboto slab';
+                            font-size: 3rem;
+                        }   
+                    }
+                }
+            }
+        }   
+        .profiling{
+            background-color: $clr-eggwhite;
+            display:flex;
+            .profile__container{
+                max-width: 110rem;
+                margin: 0 auto;
+                .profile__wrapper{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .profile__image{
+                        display: flex;
+                        justify-content: center;
+                    }
+                    .profile__info{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 3rem;
+                        font-family: 'montserrat';
+                        h1{
+                            font-family: 'roboto slab';
+                            font-size: x-large;
+                            color: $clr-dark;
+                        }
+                    }
+                }
+            }
+        }
+        .author__month{
+            padding: 15rem 2rem;
+            margin: 0 auto;
+            max-width: 130rem;
+            .author__month__wrapper{
+                background-color: $clr-light;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                align-items: center;
+                max-width: 150rem;
+                .author__month__info{
+                    display: flex;
+                    align-items: flex-start;
+                    color: $clr-dark;
+                    gap: 3rem;
+                    h1{
+                        text-align: left;
+                        max-width: 30rem;
+                        font-size: 4.5rem;
+                    }
+                    .p__texts{
+                        gap:1rem;
+                        line-height: 1.5;
+                        font-family: 'montserrat';
+                        display: flex;
+                        flex-direction: column;
+                        p{
+                            text-align: left;
+                        }
+                    }
+                }
+                .author__image{
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+        .amazon__discount{
+            .amazon__container{
+                .content__wrapper{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    
+}
+
+

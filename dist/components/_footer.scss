@@ -1,0 +1,112 @@
+.footer{
+    
+    position: relative;
+    background: rgb(29, 29, 29);
+    &__wrapper{
+        margin-top: 9rem;
+        margin-bottom: 2rem;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 10rem;
+        padding-left: 4rem;
+        padding-bottom: 6rem;
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        h1{
+            color: $clr-light;
+            font-size: 2.6rem;
+
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            p{
+                color: $clr-light;
+
+            }
+            li{
+                a{
+                    color: $clr-light;
+                }
+            }
+            img{
+                max-width: 25rem;
+            }
+        }
+    }
+    &__copyright{
+        display: flex;
+        align-items: center;
+        padding-top: 3rem;
+        justify-content: center;
+        border-top: 1px solid rgba(124, 124, 124, 0.192);
+        p{
+            display: flex;
+            color: $clr-light;
+            font-size: 1.8rem;
+            max-width: 30rem;
+            text-align: center;
+        }
+
+    }
+    &__info{
+        ul{
+            li{
+                a{
+                    &:hover{
+                        color: rgb(116, 76, 2);
+                    }
+                }
+            }
+        }
+    }
+    &__info:first-of-type{
+        ul{
+            gap: 3rem;
+        }
+    }
+    &__info:last-of-type{
+        ul{
+            gap: 2rem;
+        }
+    }
+
+    @include mediaQuery($break-nm){
+       &__content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        ul{
+            max-width: 30rem;
+        }
+       }
+       &__copyright{
+            p{
+                max-width: unset;
+            }
+       }
+    }
+    @include mediaQuery($break-lg){
+        &__wrapper{
+            margin-top: 10rem;
+            max-width: 100%;
+        }
+        &__content{
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            padding-bottom: 10rem;
+            padding-left: unset;
+            ul{
+                max-width: unset;
+                li{
+                    align-items: center;
+                }
+            }
+        }
+
+    }
+}

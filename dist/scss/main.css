@@ -1,0 +1,1818 @@
+/* -------------RESETS------------- */
+/*Resets are used for overwriting default html tag properties*/
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  color: #2b2b2b;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  overflow-x: hidden;
+  line-height: 1.4;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+time {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.body__wrapper {
+  overflow-x: hidden;
+  z-index: 0;
+}
+
+.footer__container {
+  max-width: 130rem;
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0 auto;
+}
+
+.item__container .i1 {
+  background-image: url(https://cms.code4rest.com/wp19/2023/11/08/laurie-petrou-on-editing-her-debut-novel/);
+}
+
+.footer {
+  position: relative;
+  background: rgb(29, 29, 29);
+}
+.footer__wrapper {
+  margin-top: 9rem;
+  margin-bottom: 2rem;
+}
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  padding-left: 4rem;
+  padding-bottom: 6rem;
+}
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.footer__info h1 {
+  color: white;
+  font-size: 2.6rem;
+}
+.footer__info ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.footer__info ul p {
+  color: white;
+}
+.footer__info ul li a {
+  color: white;
+}
+.footer__info ul img {
+  max-width: 25rem;
+}
+.footer__copyright {
+  display: flex;
+  align-items: center;
+  padding-top: 3rem;
+  justify-content: center;
+  border-top: 1px solid rgba(124, 124, 124, 0.192);
+}
+.footer__copyright p {
+  display: flex;
+  color: white;
+  font-size: 1.8rem;
+  max-width: 30rem;
+  text-align: center;
+}
+.footer__info ul li a:hover {
+  color: rgb(116, 76, 2);
+}
+.footer__info:first-of-type ul {
+  gap: 3rem;
+}
+.footer__info:last-of-type ul {
+  gap: 2rem;
+}
+@media screen and (min-width: 600px) {
+  .footer__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer__content ul {
+    max-width: 30rem;
+  }
+  .footer__copyright p {
+    max-width: unset;
+  }
+}
+@media screen and (min-width: 980px) {
+  .footer__wrapper {
+    margin-top: 10rem;
+    max-width: 100%;
+  }
+  .footer__content {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-bottom: 10rem;
+    padding-left: unset;
+  }
+  .footer__content ul {
+    max-width: unset;
+  }
+  .footer__content ul li {
+    align-items: center;
+  }
+}
+
+.header {
+  background-color: white;
+  position: relative;
+  font-weight: 600;
+  font-family: "montserrat";
+  font-size: small;
+  z-index: 0;
+}
+.header .container {
+  padding: 2rem;
+  margin: 0 auto;
+}
+.header .container .header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .container .header__wrapper .menu__overlay {
+  top: 0;
+  position: fixed;
+  background-color: black;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.header .container .header__wrapper .menu__overlay.open {
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  opacity: 0.5;
+  z-index: 8;
+  transition: 0.5s ease;
+}
+.header .container .header__wrapper .social__icons {
+  display: none;
+}
+.header .container .header__wrapper .branding img {
+  width: 14rem;
+  height: 4rem;
+}
+.header .container .header__wrapper .burger__btn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.header .container .header__wrapper .burger__btn span {
+  background-color: black;
+  width: 1.5rem;
+  height: 0.2rem;
+  border-radius: 10rem;
+}
+.header .container .header__wrapper .burger__btn:hover span {
+  background-color: #7f5f42;
+}
+.header .container .header__wrapper .nav__first__part, .header .container .header__wrapper .nav__second__part, .header .container .header__wrapper .nav__pages {
+  display: none;
+}
+.header .container .header__wrapper .search__btn {
+  font-size: large;
+}
+.header .container .header__wrapper .search__btn i:hover {
+  color: #7f5f42;
+  transition: 0.5s ease;
+}
+.header .container .header__wrapper .header__nav {
+  right: -200rem;
+  width: 90%;
+  height: 100vh;
+  position: fixed;
+  background-color: black;
+  top: 0;
+  transition: 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+.header .container .header__wrapper .header__nav .nav__first__part {
+  display: flex;
+  flex-direction: column;
+}
+.header .container .header__wrapper .header__nav .nav__second__part {
+  display: flex;
+  flex-direction: column;
+}
+.header .container .header__wrapper .header__nav .burger__btn__close {
+  display: flex;
+  gap: 0.3rem;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  margin-right: 3rem;
+  opacity: 0;
+}
+.header .container .header__wrapper .header__nav .burger__btn__close span {
+  background-color: white;
+  width: 0rem;
+  height: 0rem;
+  border-radius: 10rem;
+  transition: 0.5s ease;
+}
+.header .container .header__wrapper .header__nav a {
+  color: white;
+  font-weight: bold;
+  font-size: small;
+  padding: 1.4rem 1rem;
+  margin: 0 2rem;
+  border-bottom: 0.1px solid rgb(23, 23, 23);
+  gap: 1.8rem;
+}
+.header .container .header__wrapper .header__nav .nav__pages {
+  display: flex;
+  flex-direction: column;
+}
+.header .container .header__wrapper .header__nav .nav__pages h4 {
+  color: white;
+  border-bottom: 0.1px solid rgb(23, 23, 23);
+  font-weight: bold;
+  font-size: small;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  margin: 0 2rem;
+}
+.header .container .header__wrapper .header__nav .nav__pages h4 i {
+  border-left: 0.1px solid rgb(23, 23, 23);
+  padding: 1.8rem 1rem;
+  font-size: xx-small;
+}
+.header .container .header__wrapper .header__nav .nav__pages h4 i.open {
+  transform: rotate(180deg);
+  border-left: unset;
+  border-right: 0.1px solid rgb(23, 23, 23);
+}
+.header .container .header__wrapper .header__nav .nav__pages ul {
+  max-height: 0rem;
+  overflow: hidden;
+}
+.header .container .header__wrapper .header__nav .nav__pages ul li {
+  padding: 1.4rem 1rem;
+  border-bottom: 0.1px solid rgb(23, 23, 23);
+}
+.header .container .header__wrapper .header__nav .nav__pages ul li a {
+  padding: unset;
+  margin: unset;
+  color: white;
+  font-weight: bold;
+  font-size: small;
+  border-bottom: unset;
+}
+.header .container .header__wrapper .header__nav .nav__pages ul.open {
+  max-height: 90rem;
+  overflow: unset;
+  margin-left: 4rem;
+  margin-right: 2rem;
+}
+.header .container .header__wrapper .header__nav .nav__pages:hover {
+  display: flex;
+  flex-direction: column;
+}
+.header .container .header__wrapper .header__nav .nav__pages:hover h4 {
+  color: white;
+  border-bottom: 0.1px solid rgb(23, 23, 23);
+  font-weight: bold;
+  font-size: small;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  margin: 0 2rem;
+}
+.header .container .header__wrapper .header__nav .nav__pages:hover h4 i {
+  border-left: 0.1px solid rgb(23, 23, 23);
+  padding: 1.8rem 1rem;
+  font-size: xx-small;
+}
+.header .container .header__wrapper .header__nav .nav__pages:hover h4 i.open {
+  transform: rotate(180deg);
+  border-left: unset;
+  border-right: 0.1px solid rgb(23, 23, 23);
+}
+.header .container .header__wrapper .header__nav .nav__pages:hover ul {
+  max-height: 0rem;
+  overflow: hidden;
+}
+.header .container .header__wrapper .header__nav .nav__pages:hover ul li {
+  padding: 1.4rem 1rem;
+  border-bottom: 0.1px solid rgb(23, 23, 23);
+}
+.header .container .header__wrapper .header__nav .nav__pages:hover ul li a {
+  padding: unset;
+  margin: unset;
+  color: white;
+  font-weight: bold;
+  font-size: small;
+  border-bottom: unset;
+}
+.header .container .header__wrapper .header__nav .nav__pages:hover ul.open {
+  max-height: 90rem;
+  overflow: unset;
+  margin-left: 4rem;
+  margin-right: 2rem;
+}
+.header .container .header__wrapper .header__nav.open {
+  right: 0;
+  transition: 0.5s ease;
+  background-color: black;
+  z-index: 10;
+}
+.header .container .header__wrapper .header__nav.open .burger__btn__close {
+  opacity: unset;
+  transition: 0.5s ease;
+}
+.header .container .header__wrapper .header__nav.open .burger__btn__close span:first-child {
+  transform: translate(0, 0px) rotate(45deg);
+  width: 2rem;
+  height: 1.5px;
+  transition: 0.5s ease;
+  position: absolute;
+}
+.header .container .header__wrapper .header__nav.open .burger__btn__close span:last-child {
+  transform: translate(0, 0px) rotate(-45deg);
+  width: 2rem;
+  height: 1.5px;
+  transition: 0.5s ease;
+  position: absolute;
+}
+
+@media screen and (min-width: 767px) {
+  .header {
+    background-color: white;
+    position: relative;
+  }
+  .header__wrapper .branding img {
+    width: 191px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1026px) {
+  .header {
+    background-color: white;
+    position: relative;
+  }
+  .header .container .header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .container .header__wrapper .social__icons {
+    display: flex;
+  }
+  .header .container .header__wrapper .social__icons i:hover {
+    color: #7f5f42;
+    transition: 0.5s ease;
+  }
+  .header .container .header__wrapper .social__icons i {
+    padding: 1rem;
+  }
+  .header .container .header__wrapper .nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30rem;
+    z-index: 11;
+  }
+  .header .container .header__wrapper .nav__wrapper .social__icons {
+    display: flex;
+  }
+  .header .container .header__wrapper .nav__wrapper .social__icons i:hover {
+    color: #7f5f42;
+    transition: 0.5s ease;
+  }
+  .header .container .header__wrapper .nav__wrapper .social__icons i {
+    padding: 1rem;
+  }
+  .header .container .header__wrapper .nav__wrapper .nav__links {
+    display: flex;
+    align-items: center;
+    gap: 7rem;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+  }
+  .header .container .header__wrapper .nav__wrapper .nav__links a {
+    color: black;
+  }
+  .header .container .header__wrapper .nav__wrapper .nav__links a:hover {
+    color: #7f5f42;
+    transition: 0.5s ease;
+  }
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part {
+    display: flex;
+    gap: 3.6rem;
+    align-items: center;
+  }
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part .nav__pages {
+    display: flex;
+  }
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part .nav__pages h4 {
+    color: black;
+    font-weight: bold;
+    font-size: small;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 5rem 0;
+  }
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part .nav__pages h4 i {
+    font-size: xx-small;
+  }
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part .nav__pages h4 i.open {
+    transform: rotate(180deg);
+  }
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part .nav__pages .dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+    opacity: 0;
+  }
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part .nav__pages .dropdown a {
+    background-color: #7f5f42;
+    border-bottom: 1px solid #f4f3ec;
+    color: white;
+    transition: 0.5s ease;
+    padding: 1.5rem 8rem 1.5rem 2rem;
+    z-index: 100;
+  }
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part .nav__pages .dropdown a:hover {
+    background-color: #f4f3ec;
+  }
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part .nav__pages .dropdown.open {
+    opacity: 1;
+  }
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part .nav__pages:hover .dropdown.open {
+    opacity: 1;
+  }
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part .nav__pages:hover h4 {
+    color: #7f5f42;
+    transition: 0.5s ease;
+  }
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__first__part .nav__pages:hover h4 i {
+    translate: rotate(180deg);
+  }
+  .header .container .header__wrapper .nav__wrapper .nav__links .branding img {
+    width: 191px;
+    height: auto;
+  }
+  .header .container .header__wrapper .nav__wrapper .nav__links .nav__second__part {
+    display: flex;
+    gap: 4rem;
+  }
+  .header .container .header__wrapper .burger__btn {
+    display: none;
+  }
+  .header .container .header__wrapper .header__nav {
+    display: none;
+  }
+}
+.main__body .banner {
+  font-family: "montserrat", "roboto slab";
+}
+.main__body .banner .banner__bg {
+  height: 70rem;
+  background-position: center center;
+  background-image: url("../images/slide-01.jpg");
+  background-size: cover;
+}
+.main__body .banner .banner__bg .banner__texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 70rem;
+  padding: 20rem 2rem;
+  gap: 5rem;
+}
+.main__body .banner .banner__bg .banner__texts h6 {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.main__body .banner .banner__bg .banner__texts h1 {
+  color: white;
+  font-size: 65px;
+  font-family: "roboto slab";
+  line-height: 6rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.main__body .banner .banner__bg .banner__texts .buy__btn {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  transition: 0.5s ease;
+}
+.main__body .banner .banner__bg .banner__texts .buy__btn a {
+  color: white;
+  font-weight: bold;
+  font-size: small;
+  padding: 2rem 5rem;
+  max-width: 10rem;
+  background-color: #7f5f42;
+}
+.main__body .banner .banner__bg .banner__texts .buy__btn a:hover {
+  background-color: white;
+  color: #7f5f42;
+}
+.main__body .banner .banner__bg .banner__texts .buy__btn:hover {
+  transform: translate(0, -10px);
+  color: #7f5f42;
+  transition: 0.5s ease;
+}
+.main__body .chapter__part {
+  background-color: #f4f3ec;
+  padding: 15rem 0;
+}
+.main__body .chapter__part .chapter__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 170rem;
+}
+.main__body .chapter__part .chapter__wrapper h1 {
+  font-size: 5rem;
+  font-family: "roboto slab";
+}
+.main__body .chapter__part .chapter__wrapper p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  font-family: "montserrat";
+  font-weight: lighter;
+  color: black;
+  text-align: center;
+}
+.main__body .chapter__part .chapter__wrapper .a {
+  padding: 3rem 6.7rem 0;
+}
+.main__body .chapter__part .chapter__wrapper .b {
+  padding: 3rem 3.9rem 0;
+}
+.main__body .chapter__part .chapter__wrapper .c {
+  padding: 3rem 5.4rem 0;
+}
+.main__body .book__title__henry__dog .book__title__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 15rem 0rem;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 125rem;
+}
+.main__body .book__title__henry__dog .book__title__wrapper .book__title__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+}
+.main__body .book__title__henry__dog .book__title__wrapper .book__title__info h1 {
+  display: flex;
+  flex-direction: column;
+  font-family: "roboto slab";
+  font-size: 2.8rem;
+  text-align: center;
+}
+.main__body .book__title__henry__dog .book__title__wrapper .book__title__info .p__texts {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.main__body .book__title__henry__dog .book__title__wrapper .book__title__info .p__texts p {
+  font-size: 1.5rem;
+  line-height: 2;
+  font-weight: lighter;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-family: "montserrat";
+  color: black;
+}
+.main__body .book__title__henry__dog .book__title__wrapper .book__title__info img {
+  width: 10rem;
+}
+.main__body .book__title__henry__dog .book__title__wrapper img {
+  transition: 0.5s ease;
+}
+.main__body .book__title__henry__dog .book__title__wrapper img:hover {
+  transform: scale(0.9);
+  transition: 0.5s ease;
+}
+.main__body .awards__section .awards__wrapper {
+  background-color: #222222;
+  height: 62rem;
+}
+.main__body .awards__section .awards__wrapper .awards__img__container {
+  max-height: 100%;
+}
+.main__body .awards__section .awards__wrapper .awards__img__container .img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+.main__body .awards__section .awards__wrapper .awards__info {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 6rem;
+  padding: 4rem;
+}
+.main__body .awards__section .awards__wrapper .awards__info h1 {
+  font-size: 5rem;
+  font-family: "roboto slab";
+  line-height: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+.main__body .awards__section .awards__wrapper .awards__info .p__texts {
+  gap: 1rem;
+  line-height: 1.8;
+  font-family: "montserrat";
+  display: flex;
+  flex-direction: column;
+}
+.main__body .awards__section .awards__wrapper .awards__info .p__texts p {
+  display: flex;
+  flex-direction: column;
+}
+.main__body .awards__section .awards__wrapper .awards__info .buy__btn {
+  margin-top: 2rem;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  transition: 0.5s ease;
+}
+.main__body .awards__section .awards__wrapper .awards__info .buy__btn a {
+  color: black;
+  font-weight: bold;
+  font-size: small;
+  padding: 2rem 5rem;
+  background-color: white;
+}
+.main__body .awards__section .awards__wrapper .awards__info .buy__btn a:hover {
+  background-color: #7f5f42;
+  color: white;
+}
+.main__body .awards__section .awards__wrapper .awards__info .buy__btn:hover {
+  transform: translate(0, -10px);
+  color: #7f5f42;
+  transition: 0.5s ease;
+}
+.main__body .awards__section .awards__wrapper img {
+  display: none;
+}
+.main__body .collection .collection__wrapper {
+  padding: 10rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  margin: 0 auto;
+  max-width: 170rem;
+}
+.main__body .collection .collection__wrapper h1 {
+  font-family: "roboto slab";
+  font-size: 5rem;
+}
+.main__body .collection .collection__wrapper img {
+  transition: 0.5s ease;
+}
+.main__body .collection .collection__wrapper img:hover {
+  filter: grayscale(100%) brightness(60%);
+  transition: 0.5s ease;
+}
+.main__body .collection .collection__wrapper .collection__img .image__1 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem 0;
+}
+.main__body .collection .collection__wrapper .collection__img .image__1 h2 {
+  font-family: "roboto slab";
+  font-size: 3rem;
+}
+.main__body .collection .collection__wrapper .collection__img .image__2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem 0;
+}
+.main__body .collection .collection__wrapper .collection__img .image__2 h2 {
+  font-family: "roboto slab";
+  font-size: 3rem;
+}
+.main__body .collection .collection__wrapper .collection__img .image__3 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem 0;
+}
+.main__body .collection .collection__wrapper .collection__img .image__3 h2 {
+  font-family: "roboto slab";
+  font-size: 3rem;
+}
+.main__body .profiling {
+  padding: 14rem 1rem;
+  background-color: #f4f3ec;
+}
+.main__body .profiling .profile__container .profile__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+.main__body .profiling .profile__container .profile__wrapper .profile__image {
+  display: flex;
+  justify-content: center;
+}
+.main__body .profiling .profile__container .profile__wrapper .profile__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  font-family: "montserrat";
+}
+.main__body .profiling .profile__container .profile__wrapper .profile__info p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  text-align: center;
+  font-size: 1.55rem;
+}
+.main__body .profiling .profile__container .profile__wrapper .profile__info h1 {
+  font-family: "roboto slab";
+  font-size: x-large;
+  color: black;
+}
+.main__body .author__month {
+  padding: 10rem 0;
+}
+.main__body .author__month .author__month__wrapper {
+  background-color: white;
+  height: 100%;
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.main__body .author__month .author__month__wrapper .author__month__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  gap: 3rem;
+  padding: 4rem 0rem;
+}
+.main__body .author__month .author__month__wrapper .author__month__info h6 {
+  font-family: "montserrat";
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #222222;
+}
+.main__body .author__month .author__month__wrapper .author__month__info h1 {
+  font-size: 4rem;
+  font-family: "roboto slab";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__body .author__month .author__month__wrapper .author__month__info .p__texts {
+  gap: 1rem;
+  line-height: 1.5;
+  font-family: "montserrat";
+  display: flex;
+  flex-direction: column;
+}
+.main__body .author__month .author__month__wrapper .author__month__info .p__texts p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__body .author__month .author__month__wrapper .author__month__info .buy__btn {
+  margin-top: 2rem;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  transition: 0.5s ease;
+}
+.main__body .author__month .author__month__wrapper .author__month__info .buy__btn a {
+  color: white;
+  font-weight: bold;
+  font-size: small;
+  padding: 2rem 5rem;
+  background-color: #7f5f42;
+}
+.main__body .author__month .author__month__wrapper .author__month__info .buy__btn a:hover {
+  background-color: white;
+  color: #7f5f42;
+  border: 1px solid #7f5f42;
+}
+.main__body .author__month .author__month__wrapper .author__month__info .buy__btn:hover {
+  transform: translate(0, -10px);
+  color: #7f5f42;
+  transition: 0.5s ease;
+}
+.main__body .author__month .author__month__wrapper .author__image {
+  display: flex;
+  align-items: center;
+}
+.main__body .author__month .author__month__wrapper .author__image img {
+  transition: 0.5s ease;
+}
+.main__body .author__month .author__month__wrapper .author__image img:hover {
+  transition: 0.5s ease;
+  transform: scale(0.9);
+}
+.main__body .author__month .author__month__wrapper .author__quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+.main__body .author__month .author__month__wrapper .author__quote h3 {
+  font-family: "roboto slab";
+  font-size: 2.2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+.main__body .blog__lists {
+  background-color: #f4f3ec;
+}
+.main__body .blog__lists .blog__container {
+  padding: 13rem 0;
+  margin: 0 auto;
+  max-width: 170rem;
+}
+.main__body .blog__lists .blog__container .blog__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .blog__title {
+  padding-bottom: 8rem;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .blog__title h1 {
+  font-family: "roboto slab";
+  font-size: 5rem;
+  color: black;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .blog__items {
+  max-width: 130rem;
+  overflow: hidden;
+  width: 100%;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .blog__items .blog {
+  overflow: hidden;
+  margin: 2rem;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .blog__items .blog .blog__img {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .blog__items .blog .blog__img .shading {
+  background-color: #7f5f42;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .blog__items .blog .blog__img img {
+  height: 25rem;
+  -o-object-fit: fill;
+     object-fit: fill;
+  transition: 0.5s ease;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .blog__items .blog .blog__img:hover img {
+  transform: scale(1.1);
+  transition: 0.5s ease;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .blog__items .blog .blog__info {
+  padding: 2rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .blog__items .blog .blog__info h6 {
+  color: #7f5f42;
+  font-family: "montserrat";
+  font-size: 1.4rem;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .blog__items .blog .blog__info h2 {
+  font-family: "roboto slab";
+  font-size: 2.2rem;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .blog__items .blog .blog__info h2 a {
+  color: black;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .blog__items .blog .blog__info p {
+  font-family: "montserrat";
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .blog__items .blog:hover .blog__img .shading {
+  opacity: 0.4;
+  transition: 0.5s ease;
+  z-index: 10;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .blog__items .blog:hover h2 a {
+  color: #7f5f42;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .get__update {
+  box-sizing: content-box;
+  width: 100%;
+  padding: 10rem 10rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  align-items: center;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .get__update .get__update__texts h1 {
+  font-family: "roboto slab";
+  font-size: 5.5rem;
+  line-height: 2;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .get__update .get__update__texts h6 {
+  font-family: "montserrat";
+  text-align: center;
+  font-size: 1.5rem;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .get__update .enter__email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  box-sizing: content-box;
+  width: 100%;
+  max-width: 50rem;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .get__update .enter__email input {
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: #f4f3ec;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  width: 100%;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .get__update .enter__email input:focus {
+  outline: none;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .get__update .enter__email input::-moz-placeholder {
+  color: black;
+  font-family: "montserrat";
+  font-size: large;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .get__update .enter__email input::placeholder {
+  color: black;
+  font-family: "montserrat";
+  font-size: large;
+}
+.main__body .blog__lists .blog__container .blog__wrapper .get__update .enter__email a {
+  background-color: #7f5f42;
+  color: white;
+  font-family: "montserrat";
+  text-align: center;
+  width: 100%;
+  padding: 2rem 0;
+}
+.main__body .amazon__discount .amazon__container {
+  max-width: 170rem;
+  padding: 3rem;
+  margin: 0 auto;
+}
+.main__body .amazon__discount .amazon__container .content__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+.main__body .amazon__discount .amazon__container .content__wrapper h1 {
+  font-size: 2.5rem;
+  font-family: "roboto slab";
+}
+.main__body .amazon__discount .amazon__container .content__wrapper img {
+  width: 20rem;
+}
+@media screen and (min-width: 455px) {
+  .main__body .book__title__henry__dog .book__title__wrapper .book__title__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__body .book__title__henry__dog .book__title__wrapper .book__title__info h1 {
+    display: block;
+  }
+  .main__body .book__title__henry__dog .book__title__wrapper .book__title__info .p__texts {
+    display: flex;
+    align-items: center;
+  }
+  .main__body .book__title__henry__dog .book__title__wrapper .book__title__info .p__texts p {
+    display: block;
+  }
+  .main__body .book__title__henry__dog .book__title__wrapper .book__title__info .a {
+    max-width: 70rem;
+  }
+  .main__body .awards__section .awards__wrapper .awards__info {
+    max-width: 55rem;
+  }
+  .main__body .awards__section .awards__wrapper .awards__info h1 {
+    font-size: 5rem;
+    font-family: "roboto slab";
+    display: unset;
+  }
+  .main__body .awards__section .awards__wrapper .awards__info .p__texts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    line-height: 2;
+  }
+  .main__body .awards__section .awards__wrapper .awards__info .p__texts p {
+    display: unset;
+    font-size: 15px;
+  }
+  .main__body .awards__section .awards__wrapper .awards__info .buy__btn {
+    margin-top: 2rem;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    transition: 0.5s ease;
+  }
+  .main__body .awards__section .awards__wrapper .awards__info .buy__btn a {
+    color: black;
+    font-weight: bold;
+    font-size: small;
+    padding: 2rem 5rem;
+    background-color: white;
+  }
+  .main__body .awards__section .awards__wrapper .awards__info .buy__btn a:hover {
+    background-color: #7f5f42;
+    color: white;
+  }
+  .main__body .awards__section .awards__wrapper .awards__info .buy__btn:hover {
+    transform: translate(0, -10px);
+    color: #7f5f42;
+    transition: 0.5s ease;
+  }
+  .main__body .awards__section .awards__wrapper img {
+    display: unset;
+  }
+  .main__body .author__month .author__month__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .main__body .author__month .author__month__wrapper .author__month__info h1 {
+    display: block;
+    text-align: center;
+  }
+  .main__body .author__month .author__month__wrapper .author__month__info .p__texts p {
+    display: block;
+    text-align: center;
+    max-width: 80rem;
+  }
+  .main__body .author__month .author__month__wrapper .author__month__info .buy__btn {
+    margin-top: 2rem;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    transition: 0.5s ease;
+  }
+  .main__body .author__month .author__month__wrapper .author__month__info .buy__btn a {
+    color: white;
+    font-weight: bold;
+    font-size: small;
+    padding: 2rem 5rem;
+    background-color: #7f5f42;
+  }
+  .main__body .author__month .author__month__wrapper .author__month__info .buy__btn a:hover {
+    background-color: white;
+    color: #7f5f42;
+    border: 1px solid #7f5f42;
+  }
+  .main__body .author__month .author__month__wrapper .author__month__info .buy__btn:hover {
+    transform: translate(0, -10px);
+    color: #7f5f42;
+    transition: 0.5s ease;
+  }
+  .main__body .author__month .author__month__wrapper .author__image {
+    display: flex;
+    align-items: center;
+  }
+  .main__body .author__month .author__month__wrapper .author__image img {
+    transition: 0.5s ease;
+  }
+  .main__body .author__month .author__month__wrapper .author__image img:hover {
+    transition: 0.5s ease;
+    transform: scale(0.9);
+  }
+  .main__body .author__month .author__month__wrapper .author__quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+  .main__body .author__month .author__month__wrapper .author__quote h3 {
+    max-width: 70rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+  }
+}
+@media screen and (min-width: 767px) {
+  .main__body .awards__section .awards__wrapper {
+    background-color: #222222;
+    height: 62rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+  }
+  .main__body .awards__section .awards__wrapper .awards__img__container {
+    max-height: 100%;
+    background-image: url("../images/book-awards.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: auto;
+  }
+  .main__body .awards__section .awards__wrapper .awards__info {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 5rem;
+    padding: 14rem 15.9rem 14rem 11rem;
+    max-width: unset;
+  }
+  .main__body .awards__section .awards__wrapper .awards__info h1 {
+    font-size: 5rem;
+    font-family: "roboto slab";
+    display: unset;
+  }
+  .main__body .awards__section .awards__wrapper .awards__info .p__texts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    line-height: 2;
+  }
+  .main__body .awards__section .awards__wrapper .awards__info .p__texts p {
+    display: unset;
+    font-size: 15px;
+  }
+  .main__body .awards__section .awards__wrapper .awards__info .buy__btn {
+    margin-top: 2rem;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    transition: 0.5s ease;
+  }
+  .main__body .awards__section .awards__wrapper .awards__info .buy__btn a {
+    color: black;
+    font-weight: bold;
+    font-size: small;
+    padding: 2rem 5rem;
+    background-color: white;
+  }
+  .main__body .awards__section .awards__wrapper .awards__info .buy__btn a:hover {
+    background-color: #7f5f42;
+    color: white;
+  }
+  .main__body .awards__section .awards__wrapper .awards__info .buy__btn:hover {
+    transform: translate(0, -10px);
+    color: #7f5f42;
+    transition: 0.5s ease;
+  }
+  .main__body .awards__section .awards__wrapper img {
+    display: unset;
+  }
+}
+@media screen and (min-width: 1026px) {
+  .main__body .banner .banner__bg {
+    background-attachment: fixed;
+  }
+  .main__body .banner .banner__bg .banner__texts {
+    gap: 5rem;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 33rem;
+    margin: 0 auto;
+    max-width: 180rem;
+  }
+  .main__body .banner .banner__bg .banner__texts h6 {
+    color: white;
+  }
+  .main__body .banner .banner__bg .banner__texts h1 {
+    color: white;
+    font-size: 6rem;
+    padding-right: 70rem;
+    display: unset;
+  }
+  .main__body .banner .banner__bg .banner__texts a {
+    color: white;
+    font-weight: bold;
+    font-size: small;
+    padding: 1.5rem 5rem;
+  }
+  .main__body .banner .banner__bg .banner__texts .a:hover {
+    transform: translate(0, -10px);
+    background-color: white;
+    color: #7f5f42;
+    transition: 0.5s ease;
+  }
+  .main__body .chapter__part .chapter__wrapper {
+    display: flex;
+    gap: 5rem;
+    max-width: 145rem;
+    align-items: center;
+  }
+  .main__body .chapter__part .chapter__wrapper .chapter__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+  }
+  .main__body .chapter__part .chapter__wrapper .chapter__info h1 {
+    font-size: 5rem;
+    font-family: "roboto slab";
+  }
+  .main__body .chapter__part .chapter__wrapper .chapter__info p {
+    line-height: 1.8;
+    display: unset;
+    text-align: left;
+    font: "sans seriff";
+    font-weight: lighter;
+    word-spacing: 0.3rem;
+  }
+  .main__body .book__title__henry__dog .book__title__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15rem 5rem;
+  }
+  .main__body .book__title__henry__dog .book__title__wrapper .book__title__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+  .main__body .book__title__henry__dog .book__title__wrapper .book__title__info h1 {
+    font-family: "roboto slab";
+    font-size: 2.6rem;
+    text-align: left;
+    display: unset;
+    padding-right: 5rem;
+    color: black;
+    line-height: 4rem;
+  }
+  .main__body .book__title__henry__dog .book__title__wrapper .book__title__info .p__texts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .main__body .book__title__henry__dog .book__title__wrapper .book__title__info .p__texts p {
+    font-size: 1.5rem;
+    line-height: 2;
+    font-weight: lighter;
+    text-align: left;
+    display: unset;
+    font-family: "montserrat";
+  }
+  .main__body .book__title__henry__dog .book__title__wrapper .book__title__info .p__texts .a {
+    padding-right: 2rem;
+  }
+  .main__body .book__title__henry__dog .book__title__wrapper .book__title__info .p__texts .b {
+    padding-right: 1rem;
+  }
+  .main__body .book__title__henry__dog .book__title__wrapper .book__title__info img {
+    width: 12rem;
+  }
+  .main__body .book__title__henry__dog .book__title__wrapper img {
+    transition: 0.5s ease;
+  }
+  .main__body .book__title__henry__dog .book__title__wrapper img:hover {
+    transform: scale(0.9);
+    transition: 0.5s ease;
+  }
+  .main__body .collection .collection__wrapper {
+    padding: 10rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+  .main__body .collection .collection__wrapper h1 {
+    font-family: "roboto slab";
+    font-size: 5rem;
+  }
+  .main__body .collection .collection__wrapper .collection__img {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+  }
+  .main__body .collection .collection__wrapper .collection__img img {
+    transition: 0.5s ease;
+  }
+  .main__body .collection .collection__wrapper .collection__img img:hover {
+    filter: grayscale(100%) brightness(60%);
+    transition: 0.5s ease;
+  }
+  .main__body .collection .collection__wrapper .collection__img .image__1 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 2rem 0;
+  }
+  .main__body .collection .collection__wrapper .collection__img .image__1 h2 {
+    font-family: "roboto slab";
+    font-size: 3rem;
+  }
+  .main__body .collection .collection__wrapper .collection__img .image__2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 2rem 0;
+  }
+  .main__body .collection .collection__wrapper .collection__img .image__2 h2 {
+    font-family: "roboto slab";
+    font-size: 3rem;
+  }
+  .main__body .collection .collection__wrapper .collection__img .image__3 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 2rem 0;
+  }
+  .main__body .collection .collection__wrapper .collection__img .image__3 h2 {
+    font-family: "roboto slab";
+    font-size: 3rem;
+  }
+  .main__body .profiling {
+    background-color: #f4f3ec;
+    display: flex;
+  }
+  .main__body .profiling .profile__container {
+    max-width: 110rem;
+    margin: 0 auto;
+  }
+  .main__body .profiling .profile__container .profile__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__body .profiling .profile__container .profile__wrapper .profile__image {
+    display: flex;
+    justify-content: center;
+  }
+  .main__body .profiling .profile__container .profile__wrapper .profile__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    font-family: "montserrat";
+  }
+  .main__body .profiling .profile__container .profile__wrapper .profile__info h1 {
+    font-family: "roboto slab";
+    font-size: x-large;
+    color: black;
+  }
+  .main__body .author__month {
+    padding: 15rem 2rem;
+    margin: 0 auto;
+    max-width: 130rem;
+  }
+  .main__body .author__month .author__month__wrapper {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    max-width: 150rem;
+  }
+  .main__body .author__month .author__month__wrapper .author__month__info {
+    display: flex;
+    align-items: flex-start;
+    color: black;
+    gap: 3rem;
+  }
+  .main__body .author__month .author__month__wrapper .author__month__info h1 {
+    text-align: left;
+    max-width: 30rem;
+    font-size: 4.5rem;
+  }
+  .main__body .author__month .author__month__wrapper .author__month__info .p__texts {
+    gap: 1rem;
+    line-height: 1.5;
+    font-family: "montserrat";
+    display: flex;
+    flex-direction: column;
+  }
+  .main__body .author__month .author__month__wrapper .author__month__info .p__texts p {
+    text-align: left;
+  }
+  .main__body .author__month .author__month__wrapper .author__image {
+    display: flex;
+    justify-content: center;
+  }
+  .main__body .amazon__discount .amazon__container .content__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.banner {
+  background-color: white;
+  color: white;
+  text-align: center;
+}
+.banner__head {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 4rem;
+  z-index: 0;
+}
+.banner__head .banner__text {
+  display: flex;
+  flex-direction: column;
+}
+.banner__head .banner__text h1 {
+  font-size: 8rem;
+}
+.banner__head .banner__text ul li {
+  gap: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner__head .banner__text ul li a i {
+  font-size: 1rem;
+  color: white;
+}
+.banner__head .banner__text ul li a i:hover {
+  color: rgb(97, 52, 0);
+}
+.banner .item {
+  background-color: white;
+  padding: 2rem;
+}
+.banner .item__wrapper .item__container {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.7rem;
+}
+.banner .item__wrapper .item__container .paulo {
+  overflow: hidden;
+  max-width: 45rem;
+}
+.banner .item__wrapper .item__container .paulo img {
+  transition: all 0.5s;
+  max-width: 100%;
+}
+.banner .item__wrapper .item__container .paulo img:hover {
+  transform: scale(1.1);
+}
+.banner .item__wrapper .item__container .item_header {
+  display: flex;
+  align-items: center;
+}
+.banner .item__wrapper .item__container .item_header h1 a {
+  color: black;
+  font-size: 2.5rem;
+}
+.banner .item__wrapper .item__container .item_header h1 a:hover {
+  color: rgb(97, 52, 0);
+}
+.banner .item__wrapper .item__container .item_header p {
+  color: black;
+  font-size: 3.5rem;
+}
+.banner .item__wrapper .item__container h2 {
+  color: #3a2009;
+}
+.banner .item__wrapper .item__container p {
+  color: black;
+}
+.banner .item__wrapper .item__container h3 a {
+  color: black;
+  text-decoration: underline;
+}
+
+.search__bar {
+  display: flex;
+  justify-content: space-around;
+  gap: 0.8rem;
+  margin: 0 auto;
+  padding: unset;
+}
+.search__bar input {
+  width: 40rem;
+  border-style: solid black;
+  border-width: 1px;
+}
+.search__bar ul {
+  display: flex;
+  justify-content: center;
+}
+.search__bar ul li {
+  background: rgb(117, 76, 0);
+  height: 4.5rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search__bar ul li a i {
+  color: white;
+}
+.search__bar ul li a i:hover {
+  color: rgb(84, 48, 0);
+}
+
+.banner__recent {
+  background-color: white;
+}
+.banner__recent .banner__post h1 {
+  color: black;
+  font-size: 3rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 1rem;
+}
+.banner__recent .container__post1 {
+  padding: 1rem;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.banner__recent .container__post1 img {
+  max-width: 7rem;
+}
+.banner__recent .container__post1 h2 {
+  color: #3a2009;
+  display: flex;
+}
+.banner__recent .container__post1 p {
+  color: black;
+  display: flex;
+}
+.banner__recent .container__post1 p:hover {
+  color: #3a2009;
+}
+.banner__recent .container__post1 .tejada p {
+  text-align: left;
+}
+.banner__recent .container__post1 .john {
+  overflow: hidden;
+  max-width: 15rem;
+  text-align: left;
+}
+.banner__recent .recent__post {
+  background-color: white;
+}
+.banner__recent .recent__post .recent__wrapper p {
+  color: black;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .banner .item__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .banner .search__bar {
+    padding-top: 2rem;
+  }
+  .banner .search__bar input {
+    width: 80rem;
+  }
+  .banner .container__post1 {
+    flex-direction: unset;
+  }
+}
+@media screen and (min-width: 1026px) {
+  .banner .item {
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+  }
+  .banner .item__wrapper {
+    max-width: 70%;
+  }
+  .banner .item__container {
+    max-width: 40rem;
+  }
+  .banner__sticky {
+    order: -1;
+    max-width: 35rem;
+  }
+  .banner__sticky .banner__recent {
+    padding: unset;
+  }
+  .banner__sticky .banner__recent .container__post1 p {
+    max-width: 22rem;
+  }
+}
+
+.contacts {
+  display: flex;
+  margin: 0 auto;
+  max-width: 120rem;
+}
+.contacts .message {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.contacts .message .inputGroup {
+  display: flex;
+}
+.contacts .message .inputGroup .inputName input {
+  padding: 1rem;
+}
+.contacts .message .inputGroup .inputEmail input {
+  padding: 1rem;
+}
+.contacts .message .send__btn {
+  margin-top: 2rem;
+}
+.contacts .message .send__btn ul li a {
+  text-decoration: none;
+  background-color: rgb(112, 94, 66);
+  color: white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.contacts__wrapper {
+  display: flex;
+}
+.contacts__wrapper .ourgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.contacts__wrapper .ourgroup .information {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.contacts__wrapper .ourgroup .information .info {
+  display: flex;
+}
+.contacts__wrapper .ourgroup h1 {
+  font-weight: 500;
+  font-size: 50px;
+  font-family: "Roboto Slab", serif;
+  color: #000000;
+}
+.contacts__wrapper .ourgroup h2 {
+  font-size: 1.8rem;
+}
+.contacts__wrapper .message {
+  padding: 0 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contacts__wrapper .message textarea {
+  height: 10rem;
+  width: 100%;
+}
+.contacts__wrapper .message input {
+  margin-right: 120px;
+}/*# sourceMappingURL=main.css.map */
